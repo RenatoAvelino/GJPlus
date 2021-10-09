@@ -9,6 +9,7 @@ public class Pedra : MonoBehaviour
     public enum Tipos { Leve, Medio, Pesado, Prender}
     public Tipos tipo;
 
+
     // Start is called before the first frame update
     void Start()
     {
