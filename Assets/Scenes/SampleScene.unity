@@ -423,6 +423,7 @@ MonoBehaviour:
   leftMouseButton: 0
   mainCamera: {fileID: 519420031}
   targetPedra: {fileID: 245339678}
+  medidor: {fileID: 1806091110}
 --- !u!4 &811780640
 Transform:
   m_ObjectHideFlags: 0
