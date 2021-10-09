@@ -1,16 +1,19 @@
 fileFormatVersion: 2
-guid: dd062fcf6591e1344bab6c262bfcbae3
+guid: 9a35350725bbf03419475691224aabb6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7891402342722415452
-    second: Curlling_player_0
+      213: 6483974075326832851
+    second: bola_de_culling_0
   - first:
-      213: -6278063772930858986
-    second: Curlling_player_1
+      213: -747815920019087859
+    second: bola_de_culling_1
   - first:
-      213: 4642889489189387892
-    second: Curlling_player_2
+      213: 2142784251507534356
+    second: bola_de_culling_3
+  - first:
+      213: 7636654539494947244
+    second: bola_de_culling_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -100,64 +103,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Curlling_player_0
+      name: bola_de_culling_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 56
-        width: 112
-        height: 116
+        x: 4
+        y: 6
+        width: 56
+        height: 52
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a45856316b1c7290800000000000000
-      internalID: -7891402342722415452
+      spriteID: 3d0a2b46114bbf950800000000000000
+      internalID: 6483974075326832851
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Curlling_player_1
+      name: bola_de_culling_1
       rect:
         serializedVersion: 2
-        x: 150
-        y: 54
-        width: 98
-        height: 130
+        x: 71
+        y: 14
+        width: 50
+        height: 44
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6102539d246dfd8a0800000000000000
-      internalID: -6278063772930858986
+      spriteID: d0e51e102693f95f0800000000000000
+      internalID: -747815920019087859
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Curlling_player_2
+      name: bola_de_culling_3
       rect:
         serializedVersion: 2
-        x: 296
-        y: 35
-        width: 84
-        height: 174
+        x: 139
+        y: 14
+        width: 42
+        height: 44
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47e378e246bde6040800000000000000
-      internalID: 4642889489189387892
+      spriteID: 41a686d7ce2bcbd10800000000000000
+      internalID: 2142784251507534356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bola_de_culling_5
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 5
+        width: 64
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca978fac7d8daf960800000000000000
+      internalID: 7636654539494947244
       vertices: []
       indices: 
       edges: []
