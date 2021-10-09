@@ -18,9 +18,6 @@ public class Pedra : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (rb.velocity.magnitude == 0)
-        {
-            print("Parou");
-        }
+
     }
 }
