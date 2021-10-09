@@ -1,16 +1,13 @@
 fileFormatVersion: 2
-guid: dd062fcf6591e1344bab6c262bfcbae3
+guid: 4c201b71ee46c9a469e63393eab3902b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7891402342722415452
-    second: Curlling_player_0
+      213: -4496910911186477450
+    second: culling_Walls_0
   - first:
-      213: -6278063772930858986
-    second: Curlling_player_1
-  - first:
-      213: 4642889489189387892
-    second: Curlling_player_2
+      213: -2792616564071676068
+    second: culling_Walls_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -100,64 +97,52 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Curlling_player_0
+      name: culling_Walls_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 56
-        width: 112
-        height: 116
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
       tessellationDetail: 0
       bones: []
-      spriteID: 4a45856316b1c7290800000000000000
-      internalID: -7891402342722415452
+      spriteID: 67ed6281a53c791c0800000000000000
+      internalID: -4496910911186477450
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Curlling_player_1
+      name: culling_Walls_1
       rect:
         serializedVersion: 2
-        x: 150
-        y: 54
-        width: 98
-        height: 130
+        x: 65
+        y: 0
+        width: 63
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 29.5, y: 32}
+        - {x: -31.5, y: -29}
+        - {x: -31.5, y: -32}
+        - {x: 31.5, y: -32}
+        - {x: 31.5, y: 32}
       tessellationDetail: 0
       bones: []
-      spriteID: 6102539d246dfd8a0800000000000000
-      internalID: -6278063772930858986
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Curlling_player_2
-      rect:
-        serializedVersion: 2
-        x: 296
-        y: 35
-        width: 84
-        height: 174
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 47e378e246bde6040800000000000000
-      internalID: 4642889489189387892
+      spriteID: c57c2a8e702ae39d0800000000000000
+      internalID: -2792616564071676068
       vertices: []
       indices: 
       edges: []
