@@ -38,6 +38,9 @@ public class PlayerController : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             Arremesso(targetPedra);
+            actualForce = 0f;
+            medidor.UpdateMedidor(actualForce);
+            vetor.transform.rotation = Quaternion.AngleAxis(0f, Vector3.forward);
         }
     }
 
@@ -60,13 +63,18 @@ public class PlayerController : MonoBehaviour
             contando = true;
             medidor.UpdateMedidor(actualForce);
 
-            direction = Input.mousePosition - Camera.main.WorldToScreenPoint(vetor.transform.GetChild(0).position);
-            angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 90f;
-
-            angle = Mathf.Clamp(angle, -90, 90);
-
-            vetor.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            UpdateVisualVector();
         }
+    }
+
+    private void UpdateVisualVector()
+    {
+        direction = Input.mousePosition - Camera.main.WorldToScreenPoint(vetor.transform.GetChild(0).position);
+        angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 90f;
+
+        angle = Mathf.Clamp(angle, -90, 90);
+
+        vetor.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
 
     private IEnumerator Timer(float duration, bool subindo)
