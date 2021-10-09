@@ -1,17 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Medidor : MonoBehaviour
 {
     [SerializeField]
     private Sprite[] sprites = new Sprite[10];
 
-    private Image imagem;
+    private SpriteRenderer spriteRenderer;
     void Start()
     {
-        imagem = GetComponent<Image>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     public void UpdateMedidor(float percentage)
@@ -23,6 +22,6 @@ public class Medidor : MonoBehaviour
         if (force < 0)
             force = 0;
 
-        imagem.sprite = sprites[force];
+        spriteRenderer.sprite = sprites[force];
     }
 }
