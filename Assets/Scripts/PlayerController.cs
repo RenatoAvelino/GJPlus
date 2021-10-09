@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Objetos")]
     public Pedra targetPedra;
+    public Medidor medidor;
 
     void Start()
     {
@@ -54,6 +55,7 @@ public class PlayerController : MonoBehaviour
             else if(contando == false)
                 StartCoroutine(Timer(timeToFill, true));
             contando = true;
+            medidor.UpdateMedidor(actualForce);
         }
     }
 
