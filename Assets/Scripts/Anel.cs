@@ -9,6 +9,8 @@ public class Anel : MonoBehaviour
     private float Radius = 3f;
     private CircleCollider2D _ring;
     public GameController _gc;
+    [SerializeField]
+    private int score;
     void Start()
     {
         _ring = this.GetComponent<CircleCollider2D>();
@@ -28,7 +30,7 @@ public class Anel : MonoBehaviour
             GameObject tmp = collision.gameObject;
             int index = tmp.GetComponent<Pedra>()._indexOwner;
             //Debug.Log(index + " Entrou");
-            _gc.SetScoreUp(index);
+            _gc.SetScore(index, score);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -38,7 +40,7 @@ public class Anel : MonoBehaviour
             GameObject tmp = collision.gameObject;
             int index = tmp.GetComponent<Pedra>()._indexOwner;
             //Debug.Log(index + " Saiu");
-            _gc.SetScoreDown(index);
+            _gc.SetScore(index, score * (-1));
         }
     }
 }

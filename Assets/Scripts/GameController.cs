@@ -18,25 +18,15 @@ public class GameController : MonoBehaviour
 
     }
 
-    public void SetScoreUp(int index)
+    public void SetScore(int index, int score)
     {
         if (index >= 2)
         {
             Debug.LogError("Invalid Index");
             return;
         }
-        _playerScore[index]++;
+        _playerScore[index] += score;
         //Debug.Log("Player " + index + " Pontuou");
         //Debug.Log(_playerScore[index]);
-    }
-    public void SetScoreDown(int index)
-    {
-        if (index >= 2)
-        {
-            Debug.LogError("Invalid Index");
-            return;
-        }
-        _playerScore[index]--;
-
     }
 }
