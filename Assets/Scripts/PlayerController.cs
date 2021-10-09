@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     [Header("Inputs")]
     public bool leftMouseButton;
     bool contando = false;
+    public Camera mainCamera;
 
     [Header("Objetos")]
     public Pedra targetPedra;
@@ -31,11 +32,16 @@ public class PlayerController : MonoBehaviour
     {
         leftMouseButton = Input.GetMouseButton(0);
         PercentageGetter();
+        if (Input.GetMouseButtonUp(0))
+        {
+            Arremesso(targetPedra);
+        }
     }
 
     public void Arremesso(Pedra pedra)
     {
-        dir = Vector3.zero; //Falta Setar a Direção
+        Vector2 mousePos = (Vector2)mainCamera.ScreenToWorldPoint(Input.mousePosition);
+        dir = (mousePos - (Vector2)transform.position).normalized;
         pedra.gameObject.GetComponent<Rigidbody2D>().AddForce(dir * (actualForce * maxForce), ForceMode2D.Impulse);
     }
 
@@ -86,7 +92,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.green;
+        Gizmos.color = Color.magenta;
         Gizmos.DrawLine(transform.position, transform.position + dir.normalized * 5);
     }
 }
