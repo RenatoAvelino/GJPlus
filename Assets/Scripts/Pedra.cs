@@ -8,6 +8,7 @@ public class Pedra : MonoBehaviour
 
     public enum Tipos { Leve, Medio, Pesado, Prender}
     public Tipos tipo;
+    public int _indexOwner; //Player 1 = 0, Player 2 = 1
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +21,7 @@ public class Pedra : MonoBehaviour
     {
         if (rb.velocity.magnitude == 0)
         {
-            print("Parou");
+            //print("Parou");
         }
     }
 }
