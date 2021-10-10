@@ -9,6 +9,15 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     public Pedra.Tipos[] pedrasJogador2 = new Pedra.Tipos[3];
 
+    [SerializeField]
+    public PedraSpecs[] Pedras1 = new PedraSpecs[3];
+    [SerializeField]
+    public PedraSpecs[] Pedras2 = new PedraSpecs[3];
+
+
+    public int pedraSelecionadaJogador1;
+    public int pedraSelecionadaJogador2;
+
     public int turno = 0;
 
     public bool jogandoComIA = true;
@@ -44,7 +53,11 @@ public class GameManager : MonoBehaviour
     }
     #endregion
 
-
+    public struct PedraSpecs
+    {
+        public Pedra.Tipos tipo;
+        public Pedra.Cores cor;
+    }
     void Start()
     {
         interfaceManager = GameObject.Find("Interface");
@@ -77,11 +90,40 @@ public class GameManager : MonoBehaviour
         return newPedra;
     }
 
+    private Pedra.Cores SetColorPedra()
+    {
+        Pedra.Cores newColor;
+        Pedra.Cores[] tipos = { Pedra.Cores.Amarelo, Pedra.Cores.Azul, Pedra.Cores.Roxo, Pedra.Cores.Verde };
+        newColor = tipos[(int)Random.Range(0f, 2f)];
+        return newColor;
+    }
+
     public Pedra.Tipos NextPedra(GameObject gameObject)
     {
+        //if (gameObject.GetComponent<PlayerController>())
+        //{
+        //    if (pedrasJogador1[pedraSelecionadaJogador1] != Pedra.Tipos.Nada)
+        //    {
+        //        Pedra.Tipos pedrinha = pedrasJogador1[pedraSelecionadaJogador1];
+        //        pedrasJogador1[pedraSelecionadaJogador1] = Pedra.Tipos.Nada;
+        //        return pedrinha;
+        //    }
+        //}
+        //else
+        //{
+        //    for (int i = 0; i < pedrasJogador1.Length; i++)
+        //    {
+        //        if (pedrasJogador2[i] != Pedra.Tipos.Nada)
+        //        {
+        //            Pedra.Tipos pedrinha = pedrasJogador2[i];
+        //            pedrasJogador2[i] = Pedra.Tipos.Nada;
+        //            return pedrinha;
+        //        }
+        //    }
+        //}
         if (gameObject.GetComponent<PlayerController>())
         {
-            for(int i = 0; i < pedrasJogador1.Length; i++)
+            for (int i = 0; i < pedrasJogador1.Length; i++)
             {
                 if (pedrasJogador1[i] != Pedra.Tipos.Nada)
                 {
@@ -134,5 +176,14 @@ public class GameManager : MonoBehaviour
             spriteCorreto = spritePrender;
         }
         return spriteCorreto;
+    }
+
+    public void SelectedPedraPlayer1(string pedraIndex)
+    {
+        pedraSelecionadaJogador1 = System.Convert.ToInt32(pedraIndex);
+    }
+    public void SelectedPedraPlayer2(string pedraIndex)
+    {
+        pedraSelecionadaJogador2 = System.Convert.ToInt32(pedraIndex);
     }
 }

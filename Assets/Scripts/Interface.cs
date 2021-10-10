@@ -2,11 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Interface : MonoBehaviour
 {
     public Transform pedrasJogador1;
     public Transform pedrasJogador2;
+
+    public TMP_Text pontosJogador1;
+    public TMP_Text pontosJogador2;
 
     void Start()
     {

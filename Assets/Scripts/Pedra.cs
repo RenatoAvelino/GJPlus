@@ -9,6 +9,9 @@ public class Pedra : MonoBehaviour
 
     public enum Tipos { Leve, Medio, Pesado, Prender, Nada}
     public Tipos tipo;
+    public enum Cores { Amarelo, Azul, Roxo, Verde}
+    public Cores cor;
+
     public int _indexOwner; //Player 1 = 0, Player 2 = 1
     public GameObject _rastro;
     private GameObject _ultimoPingo;
