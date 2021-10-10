@@ -25,6 +25,15 @@ public class Pedra : MonoBehaviour
     void Start()
     {
         GetComponent<SpriteRenderer>().sprite = GameManager.Instance.GetPedraSprite(tipo);
+
+        if(cor == Cores.Amarelo)
+        {
+            GetComponent<SpriteRenderer>().color = Color.yellow;
+        }
+        else if(cor == Cores.Azul)
+        {
+            GetComponent<SpriteRenderer>().color = Color.blue;
+        }
         rb = GetComponent<Rigidbody2D>();
 
     }

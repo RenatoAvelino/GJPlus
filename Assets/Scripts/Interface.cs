@@ -30,11 +30,11 @@ public class Interface : MonoBehaviour
 
     public void UpdatePedras()
     {
-        for (int i = 0; i < GameManager.Instance.pedrasJogador1.Length; i++)
+        for (int i = 0; i < GameManager.Instance.Pedras1.Length; i++)
         {
-            if (GameManager.Instance.pedrasJogador1[i] != Pedra.Tipos.Nada)
+            if (GameManager.Instance.Pedras1[i].tipo != Pedra.Tipos.Nada)
             {
-                pedrasJogador1.GetChild(i).gameObject.GetComponent<Image>().sprite = GameManager.Instance.GetPedraSprite(GameManager.Instance.pedrasJogador1[i]);
+                pedrasJogador1.GetChild(i).gameObject.GetComponent<Image>().sprite = GameManager.Instance.GetPedraSprite(GameManager.Instance.Pedras1[i].tipo);
                 pedrasJogador1.GetChild(i).gameObject.GetComponent<Image>().color = new Color(1, 1, 1, 1);
             }
             else
@@ -43,9 +43,9 @@ public class Interface : MonoBehaviour
                 pedrasJogador1.GetChild(i).gameObject.GetComponent<Image>().color = new Color(0,0,0,0);
             }
 
-            if(GameManager.Instance.pedrasJogador2[i] != Pedra.Tipos.Nada)
+            if(GameManager.Instance.Pedras2[i].tipo != Pedra.Tipos.Nada)
             {
-                pedrasJogador2.GetChild(i).gameObject.GetComponent<Image>().sprite = GameManager.Instance.GetPedraSprite(GameManager.Instance.pedrasJogador2[i]);
+                pedrasJogador2.GetChild(i).gameObject.GetComponent<Image>().sprite = GameManager.Instance.GetPedraSprite(GameManager.Instance.Pedras2[i].tipo);
                 pedrasJogador2.GetChild(i).gameObject.GetComponent<Image>().color = new Color(1, 1, 1, 1);
             }
             else
