@@ -11,6 +11,7 @@ public class Pedra : MonoBehaviour
     public Tipos tipo;
     public int _indexOwner; //Player 1 = 0, Player 2 = 1
     public GameObject _rastro;
+    private GameObject _ultimoPingo;
     [SerializeField]
     private float _paintDelay = .8f;
     private float _timer = 0;
@@ -44,6 +45,14 @@ public class Pedra : MonoBehaviour
     private void Paint()
     {
         GameObject tmp = Instantiate(_rastro);
+        _ultimoPingo = tmp;
         tmp.transform.position = this.transform.position;
+        tmp.GetComponent<CircleCollider2D>().radius = 0;
+        Invoke("dryPaint", _paintDelay - 0.05f);
+    }
+
+    private void dryPaint()
+    {
+        _ultimoPingo.GetComponent<CircleCollider2D>().radius = 0.1f;
     }
 }
