@@ -208,7 +208,7 @@ GameObject:
   m_Component:
   - component: {fileID: 42568040}
   - component: {fileID: 42568039}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -340,7 +340,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 474612588}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pedras
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -355,7 +355,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 474612587}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.7823093, y: 3.1692088, z: -1671.0353}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -744,7 +744,7 @@ GameObject:
   - component: {fileID: 811780640}
   - component: {fileID: 811780639}
   - component: {fileID: 811780641}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -950,7 +950,7 @@ GameObject:
   m_Component:
   - component: {fileID: 847182807}
   - component: {fileID: 847182806}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -974,7 +974,11 @@ MonoBehaviour:
   turno: 0
   jogandoComIA: 1
   player1Jogando: 1
-  interfaceManager: {fileID: 0}
+  interfaceManager: {fileID: 1772845133}
+  spriteLeve: {fileID: 2142784251507534356, guid: 9a35350725bbf03419475691224aabb6, type: 3}
+  spriteMedio: {fileID: -747815920019087859, guid: 9a35350725bbf03419475691224aabb6, type: 3}
+  spritePesado: {fileID: 6483974075326832851, guid: 9a35350725bbf03419475691224aabb6, type: 3}
+  spritePrender: {fileID: 7636654539494947244, guid: 9a35350725bbf03419475691224aabb6, type: 3}
 --- !u!4 &847182807
 Transform:
   m_ObjectHideFlags: 0
@@ -999,7 +1003,7 @@ GameObject:
   m_Component:
   - component: {fileID: 952218590}
   - component: {fileID: 952218589}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Culling_arena
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1082,7 +1086,7 @@ GameObject:
   - component: {fileID: 1095126629}
   - component: {fileID: 1095126628}
   - component: {fileID: 1095126627}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EventSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1147,7 +1151,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1100092026}
   - component: {fileID: 1100092025}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: culling_Vector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1231,7 +1235,7 @@ GameObject:
   - component: {fileID: 1359210468}
   - component: {fileID: 1359210467}
   - component: {fileID: 1359210469}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Medidor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1336,7 +1340,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1486059397}
   - component: {fileID: 1486059396}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: IA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1892,7 +1896,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1772845134}
   - component: {fileID: 1772845135}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Interface
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1927,10 +1931,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pedrasJogador1: {fileID: 672336236}
   pedrasJogador2: {fileID: 247137487}
-  spriteLeve: {fileID: 2142784251507534356, guid: 9a35350725bbf03419475691224aabb6, type: 3}
-  spriteMedio: {fileID: -747815920019087859, guid: 9a35350725bbf03419475691224aabb6, type: 3}
-  spritePesado: {fileID: 6483974075326832851, guid: 9a35350725bbf03419475691224aabb6, type: 3}
-  spritePrender: {fileID: 7636654539494947244, guid: 9a35350725bbf03419475691224aabb6, type: 3}
 --- !u!1 &1961548624
 GameObject:
   m_ObjectHideFlags: 0
@@ -1940,7 +1940,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1961548625}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1972,7 +1972,7 @@ GameObject:
   - component: {fileID: 2015181684}
   - component: {fileID: 2015181683}
   - component: {fileID: 2015181685}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Culling_arena_1x2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2090,6 +2090,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pedra
       objectReference: {fileID: 0}
+    - target: {fileID: 2305930400266229330, guid: 02e695e6b4b760b4299b014fb560c524, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2305930400266229357, guid: 02e695e6b4b760b4299b014fb560c524, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2100,7 +2104,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2305930400266229357, guid: 02e695e6b4b760b4299b014fb560c524, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.977
+      value: 15.01
       objectReference: {fileID: 0}
     - target: {fileID: 2305930400266229357, guid: 02e695e6b4b760b4299b014fb560c524, type: 3}
       propertyPath: m_LocalPosition.z

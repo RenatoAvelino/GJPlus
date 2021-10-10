@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField]
     public Pedra.Tipos[] pedrasJogador1 = new Pedra.Tipos[3];
+    [SerializeField]
     public Pedra.Tipos[] pedrasJogador2 = new Pedra.Tipos[3];
 
     public int turno = 0;
@@ -14,6 +16,11 @@ public class GameManager : MonoBehaviour
     public bool player1Jogando = true;
 
     public GameObject interfaceManager;
+
+    public Sprite spriteLeve;
+    public Sprite spriteMedio;
+    public Sprite spritePesado;
+    public Sprite spritePrender;
 
     #region SINGLETOM
     public static GameManager _instance;
@@ -36,6 +43,7 @@ public class GameManager : MonoBehaviour
         }
     }
     #endregion
+
 
     void Start()
     {
@@ -95,6 +103,7 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
+        interfaceManager.GetComponent<Interface>().UpdatePedras();
         return Pedra.Tipos.Nada;
     }
 
@@ -103,5 +112,27 @@ public class GameManager : MonoBehaviour
 
         turno++;
         player1Jogando = !player1Jogando;
+    }
+
+    public Sprite GetPedraSprite(Pedra.Tipos tipo)
+    {
+        Sprite spriteCorreto = null;
+        if (tipo == Pedra.Tipos.Leve)
+        {
+            spriteCorreto = spriteLeve;
+        }
+        else if (tipo == Pedra.Tipos.Medio)
+        {
+            spriteCorreto = spriteMedio;
+        }
+        else if (tipo == Pedra.Tipos.Pesado)
+        {
+            spriteCorreto = spritePesado;
+        }
+        else if (tipo == Pedra.Tipos.Prender)
+        {
+            spriteCorreto = spritePrender;
+        }
+        return spriteCorreto;
     }
 }

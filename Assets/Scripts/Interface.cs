@@ -8,11 +8,6 @@ public class Interface : MonoBehaviour
     public Transform pedrasJogador1;
     public Transform pedrasJogador2;
 
-    public Sprite spriteLeve;
-    public Sprite spriteMedio;
-    public Sprite spritePesado;
-    public Sprite spritePrender;
-    // Start is called before the first frame update
     void Start()
     {
 
@@ -30,44 +25,23 @@ public class Interface : MonoBehaviour
         {
             if (GameManager.Instance.pedrasJogador1[i] != Pedra.Tipos.Nada)
             {
-                pedrasJogador1.GetChild(i).gameObject.GetComponent<Image>().sprite = GetSprite(GameManager.Instance.pedrasJogador1[i]);
+                pedrasJogador1.GetChild(i).gameObject.GetComponent<Image>().sprite = GameManager.Instance.GetPedraSprite(GameManager.Instance.pedrasJogador1[i]);
             }
             else
             {
                 pedrasJogador1.GetChild(i).gameObject.GetComponent<Image>().sprite = null;
+                pedrasJogador1.GetChild(i).gameObject.GetComponent<Image>().color = new Color(0,0,0,0);
             }
 
             if(GameManager.Instance.pedrasJogador2[i] != Pedra.Tipos.Nada)
             {
-                pedrasJogador2.GetChild(i).gameObject.GetComponent<Image>().sprite = GetSprite(GameManager.Instance.pedrasJogador2[i]);
+                pedrasJogador2.GetChild(i).gameObject.GetComponent<Image>().sprite = GameManager.Instance.GetPedraSprite(GameManager.Instance.pedrasJogador2[i]);
             }
             else
             {
                 pedrasJogador2.GetChild(i).gameObject.GetComponent<Image>().sprite = null;
+                pedrasJogador2.GetChild(i).gameObject.GetComponent<Image>().color = new Color(0, 0, 0, 0);
             }
-
         }
-    }
-
-    private Sprite GetSprite(Pedra.Tipos tipo)
-    {
-        Sprite spriteCorreto = null;
-        if (tipo == Pedra.Tipos.Leve)
-        {
-            spriteCorreto = spriteLeve;
-        }
-        else if (tipo == Pedra.Tipos.Medio)
-        {
-            spriteCorreto = spriteMedio;
-        }
-        else if (tipo == Pedra.Tipos.Pesado)
-        {
-            spriteCorreto = spritePesado;
-        }
-        else if (tipo == Pedra.Tipos.Prender)
-        {
-            spriteCorreto = spritePrender;
-        }
-        return spriteCorreto;
     }
 }
