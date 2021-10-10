@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField]
-    public Pedra.Tipos[] pedrasJogador1 = new Pedra.Tipos[3];
-    [SerializeField]
-    public Pedra.Tipos[] pedrasJogador2 = new Pedra.Tipos[3];
 
     [SerializeField]
     public PedraSpecs[] Pedras1 = new PedraSpecs[3];
@@ -73,10 +69,13 @@ public class GameManager : MonoBehaviour
 
     private void SetInitialPedras()
     {
-        for(int i = 0; i < pedrasJogador1.Length; i++)
+        for(int i = 0; i < Pedras1.Length; i++)
         {
-            pedrasJogador1[i] = CreatePedra();
-            pedrasJogador2[i] = CreatePedra();
+            Pedras1[i].tipo = CreatePedra();
+            Pedras2[i].tipo = CreatePedra();
+
+            Pedras1[i].cor = SetColorPedra();
+            Pedras2[i].cor = SetColorPedra();
         }
 
         interfaceManager.GetComponent<Interface>().UpdatePedras();
@@ -98,7 +97,7 @@ public class GameManager : MonoBehaviour
         return newColor;
     }
 
-    public Pedra.Tipos NextPedra(GameObject gameObject)
+    public PedraSpecs NextPedra(GameObject gameObject)
     {
         //if (gameObject.GetComponent<PlayerController>())
         //{
@@ -123,35 +122,34 @@ public class GameManager : MonoBehaviour
         //}
         if (gameObject.GetComponent<PlayerController>())
         {
-            for (int i = 0; i < pedrasJogador1.Length; i++)
+            for (int i = 0; i < Pedras1.Length; i++)
             {
-                if (pedrasJogador1[i] != Pedra.Tipos.Nada)
+                if (Pedras1[i].tipo != Pedra.Tipos.Nada)
                 {
-                    Pedra.Tipos pedrinha = pedrasJogador1[i];
-                    pedrasJogador1[i] = Pedra.Tipos.Nada;
+                    PedraSpecs pedrinha = Pedras1[i];
+                    Pedras1[i].tipo = Pedra.Tipos.Nada;
                     return pedrinha;
                 }
             }
         }
         else
         {
-            for (int i = 0; i < pedrasJogador1.Length; i++)
+            for (int i = 0; i < Pedras1.Length; i++)
             {
-                if (pedrasJogador2[i] != Pedra.Tipos.Nada)
+                if (Pedras2[i].tipo != Pedra.Tipos.Nada)
                 {
-                    Pedra.Tipos pedrinha = pedrasJogador2[i];
-                    pedrasJogador2[i] = Pedra.Tipos.Nada;
+                    PedraSpecs pedrinha = Pedras2[i];
+                    Pedras2[i].tipo = Pedra.Tipos.Nada;
                     return pedrinha;
                 }
             }
         }
         interfaceManager.GetComponent<Interface>().UpdatePedras();
-        return Pedra.Tipos.Nada;
+        return new PedraSpecs();
     }
 
     public void ProximoTurno()
     {
-
         turno++;
         player1Jogando = !player1Jogando;
     }
@@ -185,5 +183,10 @@ public class GameManager : MonoBehaviour
     public void SelectedPedraPlayer2(string pedraIndex)
     {
         pedraSelecionadaJogador2 = System.Convert.ToInt32(pedraIndex);
+    }
+
+    public void PedraStopped()
+    {
+        ProximoTurno();
     }
 }

@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
     bool contando = false;
     public Camera mainCamera;
 
+    private float horizontalInput;
+
     [Header("Objetos")]
     //public Pedra targetPedra;
     public Medidor medidor;
@@ -29,6 +31,8 @@ public class PlayerController : MonoBehaviour
 
     public Interface interfaceManager;
 
+    public LayerMask paredeMask;
+
     void Start()
     {
         interfaceManager = GameObject.Find("Interface").GetComponent<Interface>();
@@ -37,6 +41,14 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.left, 1.5f, paredeMask, 0, 0);
+        if (hit.collider)
+            medidor.transform.position = new Vector3(transform.position.x + 1, medidor.transform.position.y, medidor.transform.position.z);
+        else
+            medidor.transform.position = new Vector3(transform.position.x - 1, medidor.transform.position.y, medidor.transform.position.z);
+
+        horizontalInput = Input.GetAxisRaw("Horizontal");
+        transform.position += new Vector3(horizontalInput, 0f, 0f) * Time.deltaTime;
         leftMouseButton = Input.GetMouseButton(0);
         PercentageGetter();
         if (Input.GetMouseButtonUp(0))

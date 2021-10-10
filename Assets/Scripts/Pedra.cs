@@ -39,6 +39,8 @@ public class Pedra : MonoBehaviour
             {
                 rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
             }
+            GameManager.Instance.PedraStopped();
+            enabled = false;
         }
         if (_isPainting)
         {
