@@ -57,6 +57,7 @@ public class GameManager : MonoBehaviour
             pedrasJogador1[i] = CreatePedra();
             pedrasJogador2[i] = CreatePedra();
         }
+
         interfaceManager.GetComponent<Interface>().UpdatePedras();
     }
 
@@ -66,6 +67,35 @@ public class GameManager : MonoBehaviour
         Pedra.Tipos[] tipos = { Pedra.Tipos.Leve, Pedra.Tipos.Medio, Pedra.Tipos.Pesado, Pedra.Tipos.Prender };
         newPedra.tipo = tipos[(int) Random.Range(0f, 3f)];
         return newPedra;
+    }
+
+    public Pedra NextPedra(GameObject gameObject)
+    {
+        if (gameObject.GetComponent<PlayerController>())
+        {
+            for(int i = 0; i < pedrasJogador1.Length; i++)
+            {
+                if (pedrasJogador1[i] != null)
+                {
+                    Pedra pedrinha = pedrasJogador1[i];
+                    pedrasJogador1[i] = null;
+                    return pedrinha;
+                }
+            }
+        }
+        else
+        {
+            for (int i = 0; i < pedrasJogador1.Length; i++)
+            {
+                if (pedrasJogador2[i] != null)
+                {
+                    Pedra pedrinha = pedrasJogador2[i];
+                    pedrasJogador2[i] = null;
+                    return pedrinha;
+                }
+            }
+        }
+        return new Pedra();
     }
 
     public void ProximoTurno()

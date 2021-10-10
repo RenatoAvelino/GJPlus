@@ -51,6 +51,8 @@ public class PlayerController : MonoBehaviour
         //Vector2 mousePos = (Vector2)mainCamera.ScreenToWorldPoint(Input.mousePosition);
         //direction = (mousePos - (Vector2)vetor.transform.GetChild(0).position).normalized;
         direction = VectorByAngle(angle - 90);
+        GameObject newPedra = Instantiate(prefabPedra, vetor.transform.GetChild(0).position, Quaternion.identity, GameObject.Find("Pedras").transform);
+
         pedra.gameObject.GetComponent<Rigidbody2D>().AddForce(direction * (actualForce * maxForce), ForceMode2D.Impulse);
     }
 

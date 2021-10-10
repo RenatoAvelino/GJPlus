@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Pedra : MonoBehaviour
 {
+    [SerializeField]
     private Rigidbody2D rb;
 
     public enum Tipos { Leve, Medio, Pesado, Prender}
