@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
 
     public int turno = 0;
 
+    public bool jogandoComIA = true;
+
     public bool player1Jogando = true;
 
     public GameObject interfaceManager;
@@ -68,6 +70,7 @@ public class GameManager : MonoBehaviour
 
     public void ProximoTurno()
     {
+
         turno++;
         player1Jogando = !player1Jogando;
     }

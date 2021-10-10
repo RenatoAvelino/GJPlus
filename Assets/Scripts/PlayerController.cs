@@ -25,6 +25,8 @@ public class PlayerController : MonoBehaviour
     public Medidor medidor;
     public GameObject vetor;
 
+    public GameObject prefabPedra;
+
     void Start()
     {
 
@@ -109,12 +111,12 @@ public class PlayerController : MonoBehaviour
         return new Vector3(Mathf.Cos(Mathf.Deg2Rad * angulo), Mathf.Sin(Mathf.Deg2Rad * angulo), 0).normalized;
     }
 
-    private void OnGUI()
-    {
-        Vector2 nativeSize = new Vector2(1080, 1920);
-        GUIStyle style = new GUIStyle(GUI.skin.label);
-        style.fontSize = (int)(60.0f * ((float)Screen.width / (float)nativeSize.x));
-        GUI.color = Color.green;
-        GUI.Label(new Rect(0, 20, Screen.width, Screen.height), angle.ToString(), style);
-    }
+    //private void OnGUI()
+    //{
+    //    Vector2 nativeSize = new Vector2(1080, 1920);
+    //    GUIStyle style = new GUIStyle(GUI.skin.label);
+    //    style.fontSize = (int)(60.0f * ((float)Screen.width / (float)nativeSize.x));
+    //    GUI.color = Color.green;
+    //    GUI.Label(new Rect(0, 20, Screen.width, Screen.height), angle.ToString(), style);
+    //}
 }
