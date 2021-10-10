@@ -7,7 +7,7 @@ public class Pedra : MonoBehaviour
     [SerializeField]
     private Rigidbody2D rb;
 
-    public enum Tipos { Leve, Medio, Pesado, Prender}
+    public enum Tipos { Leve, Medio, Pesado, Prender, Nada}
     public Tipos tipo;
     public int _indexOwner; //Player 1 = 0, Player 2 = 1
     public GameObject _rastro;

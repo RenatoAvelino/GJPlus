@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     public Camera mainCamera;
 
     [Header("Objetos")]
-    public Pedra targetPedra;
+    //public Pedra targetPedra;
     public Medidor medidor;
     public GameObject vetor;
 
@@ -39,21 +39,25 @@ public class PlayerController : MonoBehaviour
         PercentageGetter();
         if (Input.GetMouseButtonUp(0))
         {
-            Arremesso(targetPedra);
+            Arremesso();
             actualForce = 0f;
             medidor.UpdateMedidor(actualForce);
             vetor.transform.rotation = Quaternion.AngleAxis(0f, Vector3.forward);
         }
     }
 
-    public void Arremesso(Pedra pedra)
+    public void Arremesso()
     {
         //Vector2 mousePos = (Vector2)mainCamera.ScreenToWorldPoint(Input.mousePosition);
         //direction = (mousePos - (Vector2)vetor.transform.GetChild(0).position).normalized;
         direction = VectorByAngle(angle - 90);
-        GameObject newPedra = Instantiate(prefabPedra, vetor.transform.GetChild(0).position, Quaternion.identity, GameObject.Find("Pedras").transform);
-
-        pedra.gameObject.GetComponent<Rigidbody2D>().AddForce(direction * (actualForce * maxForce), ForceMode2D.Impulse);
+        Pedra.Tipos nextTipo = GameManager.Instance.NextPedra(gameObject);
+        if(nextTipo != Pedra.Tipos.Nada)
+        {
+            GameObject newPedra = Instantiate(prefabPedra, vetor.transform.GetChild(0).position, Quaternion.identity, GameObject.Find("Pedras").transform);
+            newPedra.GetComponent<Pedra>().tipo = nextTipo;
+            newPedra.gameObject.GetComponent<Rigidbody2D>().AddForce(direction * (actualForce * maxForce), ForceMode2D.Impulse);
+        }
     }
 
     private void PercentageGetter()
