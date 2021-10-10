@@ -27,9 +27,11 @@ public class PlayerController : MonoBehaviour
 
     public GameObject prefabPedra;
 
+    public Interface interfaceManager;
+
     void Start()
     {
-
+        interfaceManager = GameObject.Find("Interface").GetComponent<Interface>();
     }
 
     // Update is called once per frame
@@ -58,6 +60,7 @@ public class PlayerController : MonoBehaviour
             newPedra.GetComponent<Pedra>().tipo = nextTipo;
             newPedra.gameObject.GetComponent<Rigidbody2D>().AddForce(direction * (actualForce * maxForce), ForceMode2D.Impulse);
         }
+        interfaceManager.UpdatePedras();
     }
 
     private void PercentageGetter()

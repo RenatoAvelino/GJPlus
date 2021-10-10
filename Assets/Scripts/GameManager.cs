@@ -73,7 +73,7 @@ public class GameManager : MonoBehaviour
     {
         Pedra.Tipos newPedra;
         Pedra.Tipos[] tipos = { Pedra.Tipos.Leve, Pedra.Tipos.Medio, Pedra.Tipos.Pesado, Pedra.Tipos.Prender };
-        newPedra = tipos[(int) Random.Range(0f, 3f)];
+        newPedra = tipos[(int) Random.Range(0f, 4f)];
         return newPedra;
     }
 

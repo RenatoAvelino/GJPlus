@@ -32,6 +32,10 @@ public class Pedra : MonoBehaviour
         if(rb.velocity.magnitude == 0)
         {
             _isPainting = false;
+            if(tipo == Tipos.Prender)
+            {
+                rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
+            }
         }
         if (_isPainting)
         {

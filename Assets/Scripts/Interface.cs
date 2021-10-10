@@ -26,6 +26,7 @@ public class Interface : MonoBehaviour
             if (GameManager.Instance.pedrasJogador1[i] != Pedra.Tipos.Nada)
             {
                 pedrasJogador1.GetChild(i).gameObject.GetComponent<Image>().sprite = GameManager.Instance.GetPedraSprite(GameManager.Instance.pedrasJogador1[i]);
+                pedrasJogador1.GetChild(i).gameObject.GetComponent<Image>().color = new Color(1, 1, 1, 1);
             }
             else
             {
@@ -36,6 +37,7 @@ public class Interface : MonoBehaviour
             if(GameManager.Instance.pedrasJogador2[i] != Pedra.Tipos.Nada)
             {
                 pedrasJogador2.GetChild(i).gameObject.GetComponent<Image>().sprite = GameManager.Instance.GetPedraSprite(GameManager.Instance.pedrasJogador2[i]);
+                pedrasJogador2.GetChild(i).gameObject.GetComponent<Image>().color = new Color(1, 1, 1, 1);
             }
             else
             {
