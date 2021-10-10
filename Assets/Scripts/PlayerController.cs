@@ -25,6 +25,8 @@ public class PlayerController : MonoBehaviour
     public Medidor medidor;
     public GameObject vetor;
 
+    public GameObject prefabPedra;
+
     void Start()
     {
 
@@ -38,6 +40,9 @@ public class PlayerController : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             Arremesso(targetPedra);
+            actualForce = 0f;
+            medidor.UpdateMedidor(actualForce);
+            vetor.transform.rotation = Quaternion.AngleAxis(0f, Vector3.forward);
         }
     }
 
@@ -46,6 +51,8 @@ public class PlayerController : MonoBehaviour
         //Vector2 mousePos = (Vector2)mainCamera.ScreenToWorldPoint(Input.mousePosition);
         //direction = (mousePos - (Vector2)vetor.transform.GetChild(0).position).normalized;
         direction = VectorByAngle(angle - 90);
+        GameObject newPedra = Instantiate(prefabPedra, vetor.transform.GetChild(0).position, Quaternion.identity, GameObject.Find("Pedras").transform);
+
         pedra.gameObject.GetComponent<Rigidbody2D>().AddForce(direction * (actualForce * maxForce), ForceMode2D.Impulse);
     }
 
@@ -60,13 +67,18 @@ public class PlayerController : MonoBehaviour
             contando = true;
             medidor.UpdateMedidor(actualForce);
 
-            direction = Input.mousePosition - Camera.main.WorldToScreenPoint(vetor.transform.GetChild(0).position);
-            angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 90f;
-
-            angle = Mathf.Clamp(angle, -90, 90);
-
-            vetor.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            UpdateVisualVector();
         }
+    }
+
+    private void UpdateVisualVector()
+    {
+        direction = Input.mousePosition - Camera.main.WorldToScreenPoint(vetor.transform.GetChild(0).position);
+        angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 90f;
+
+        angle = Mathf.Clamp(angle, -90, 90);
+
+        vetor.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
 
     private IEnumerator Timer(float duration, bool subindo)
@@ -101,12 +113,12 @@ public class PlayerController : MonoBehaviour
         return new Vector3(Mathf.Cos(Mathf.Deg2Rad * angulo), Mathf.Sin(Mathf.Deg2Rad * angulo), 0).normalized;
     }
 
-    private void OnGUI()
-    {
-        Vector2 nativeSize = new Vector2(1080, 1920);
-        GUIStyle style = new GUIStyle(GUI.skin.label);
-        style.fontSize = (int)(60.0f * ((float)Screen.width / (float)nativeSize.x));
-        GUI.color = Color.green;
-        GUI.Label(new Rect(0, 20, Screen.width, Screen.height), angle.ToString(), style);
-    }
+    //private void OnGUI()
+    //{
+    //    Vector2 nativeSize = new Vector2(1080, 1920);
+    //    GUIStyle style = new GUIStyle(GUI.skin.label);
+    //    style.fontSize = (int)(60.0f * ((float)Screen.width / (float)nativeSize.x));
+    //    GUI.color = Color.green;
+    //    GUI.Label(new Rect(0, 20, Screen.width, Screen.height), angle.ToString(), style);
+    //}
 }

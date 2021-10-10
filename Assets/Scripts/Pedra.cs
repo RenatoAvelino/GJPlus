@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Pedra : MonoBehaviour
 {
+    [SerializeField]
     private Rigidbody2D rb;
 
     public enum Tipos { Leve, Medio, Pesado, Prender}
@@ -14,6 +15,7 @@ public class Pedra : MonoBehaviour
     private float _paintDelay = .8f;
     private float _timer = 0;
     private bool _isPainting = true;
+
 
     // Start is called before the first frame update
     void Start()

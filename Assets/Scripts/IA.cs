@@ -15,6 +15,7 @@ public class IA : MonoBehaviour
     [Range(-90f, 0f)]
     public float maxAngle;
 
+
     [Header("Objetos")]
     public Pedra targetPedra;
 
@@ -42,11 +43,11 @@ public class IA : MonoBehaviour
         return new Vector3(Mathf.Cos(Mathf.Deg2Rad * angulo), Mathf.Sin(Mathf.Deg2Rad * angulo), 0).normalized;
     }
 
-    private void OnGUI()
-    {
-        GUI.color = Color.green;
-        GUI.Label(new Rect(0, 0, Screen.width, Screen.height), dir.ToString(), GUI.skin.label);
-    }
+    //private void OnGUI()
+    //{
+    //    GUI.color = Color.green;
+    //    GUI.Label(new Rect(0, 0, Screen.width, Screen.height), dir.ToString(), GUI.skin.label);
+    //}
 
     private void OnDrawGizmos()
     {
