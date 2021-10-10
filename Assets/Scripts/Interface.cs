@@ -28,18 +28,18 @@ public class Interface : MonoBehaviour
     {
         for (int i = 0; i < GameManager.Instance.pedrasJogador1.Length; i++)
         {
-            if (GameManager.Instance.pedrasJogador1[i] != null)
+            if (GameManager.Instance.pedrasJogador1[i] != Pedra.Tipos.Nada)
             {
-                pedrasJogador1.GetChild(i).gameObject.GetComponent<Image>().sprite = GetSprite(GameManager.Instance.pedrasJogador1[i].tipo);
+                pedrasJogador1.GetChild(i).gameObject.GetComponent<Image>().sprite = GetSprite(GameManager.Instance.pedrasJogador1[i]);
             }
             else
             {
                 pedrasJogador1.GetChild(i).gameObject.GetComponent<Image>().sprite = null;
             }
 
-            if(GameManager.Instance.pedrasJogador2[i] != null)
+            if(GameManager.Instance.pedrasJogador2[i] != Pedra.Tipos.Nada)
             {
-                pedrasJogador2.GetChild(i).gameObject.GetComponent<Image>().sprite = GetSprite(GameManager.Instance.pedrasJogador2[i].tipo);
+                pedrasJogador2.GetChild(i).gameObject.GetComponent<Image>().sprite = GetSprite(GameManager.Instance.pedrasJogador2[i]);
             }
             else
             {

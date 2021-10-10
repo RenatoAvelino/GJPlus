@@ -771,7 +771,6 @@ MonoBehaviour:
   angle: 0
   leftMouseButton: 0
   mainCamera: {fileID: 519420031}
-  targetPedra: {fileID: 245339678}
   medidor: {fileID: 1359210469}
   vetor: {fileID: 1100092024}
   prefabPedra: {fileID: 2305930400266229330, guid: 02e695e6b4b760b4299b014fb560c524, type: 3}
@@ -970,14 +969,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 504a5e95a50cf774ca91ee74ae7ba31a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pedrasJogador1:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  pedrasJogador2:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  pedrasJogador1: 000000000000000000000000
+  pedrasJogador2: 000000000000000000000000
   turno: 0
   jogandoComIA: 1
   player1Jogando: 1
@@ -2103,7 +2096,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2305930400266229357, guid: 02e695e6b4b760b4299b014fb560c524, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.477
+      value: -6.9
       objectReference: {fileID: 0}
     - target: {fileID: 2305930400266229357, guid: 02e695e6b4b760b4299b014fb560c524, type: 3}
       propertyPath: m_LocalPosition.y

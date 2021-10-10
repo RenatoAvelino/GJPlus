@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public Pedra[] pedrasJogador1 = new Pedra[3];
-    public Pedra[] pedrasJogador2 = new Pedra[3];
+    public Pedra.Tipos[] pedrasJogador1 = new Pedra.Tipos[3];
+    public Pedra.Tipos[] pedrasJogador2 = new Pedra.Tipos[3];
 
     public int turno = 0;
 
@@ -61,24 +61,24 @@ public class GameManager : MonoBehaviour
         interfaceManager.GetComponent<Interface>().UpdatePedras();
     }
 
-    private Pedra CreatePedra()
+    private Pedra.Tipos CreatePedra()
     {
-        Pedra newPedra = new Pedra();
+        Pedra.Tipos newPedra;
         Pedra.Tipos[] tipos = { Pedra.Tipos.Leve, Pedra.Tipos.Medio, Pedra.Tipos.Pesado, Pedra.Tipos.Prender };
-        newPedra.tipo = tipos[(int) Random.Range(0f, 3f)];
+        newPedra = tipos[(int) Random.Range(0f, 3f)];
         return newPedra;
     }
 
-    public Pedra NextPedra(GameObject gameObject)
+    public Pedra.Tipos NextPedra(GameObject gameObject)
     {
         if (gameObject.GetComponent<PlayerController>())
         {
             for(int i = 0; i < pedrasJogador1.Length; i++)
             {
-                if (pedrasJogador1[i] != null)
+                if (pedrasJogador1[i] != Pedra.Tipos.Nada)
                 {
-                    Pedra pedrinha = pedrasJogador1[i];
-                    pedrasJogador1[i] = null;
+                    Pedra.Tipos pedrinha = pedrasJogador1[i];
+                    pedrasJogador1[i] = Pedra.Tipos.Nada;
                     return pedrinha;
                 }
             }
@@ -87,15 +87,15 @@ public class GameManager : MonoBehaviour
         {
             for (int i = 0; i < pedrasJogador1.Length; i++)
             {
-                if (pedrasJogador2[i] != null)
+                if (pedrasJogador2[i] != Pedra.Tipos.Nada)
                 {
-                    Pedra pedrinha = pedrasJogador2[i];
-                    pedrasJogador2[i] = null;
+                    Pedra.Tipos pedrinha = pedrasJogador2[i];
+                    pedrasJogador2[i] = Pedra.Tipos.Nada;
                     return pedrinha;
                 }
             }
         }
-        return new Pedra();
+        return Pedra.Tipos.Nada;
     }
 
     public void ProximoTurno()
