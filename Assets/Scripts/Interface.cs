@@ -19,6 +19,11 @@ public class Interface : MonoBehaviour
 
     }
 
+    public void UpdatePontos()
+    {
+       
+    }
+
     public void UpdatePedras()
     {
         for (int i = 0; i < GameManager.Instance.pedrasJogador1.Length; i++)
