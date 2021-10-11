@@ -20,6 +20,11 @@ public class IA : MonoBehaviour
     public Pedra targetPedra;
     public GameObject player;
 
+    public GameObject prefabPedra;
+    public GameObject vetor;
+
+    public Interface interfaceManager;
+
     void Start()
     {
 
@@ -30,15 +35,27 @@ public class IA : MonoBehaviour
     {
         if (GameManager.Instance.CanPlay && !GameManager.Instance.player1Jogando)
         {
+            player.GetComponent<SpriteRenderer>().color = Color.green;
+            Arremesso();
         }
     }
 
-    public void Arremesso(Pedra pedra)
+    public void Arremesso()
     {
+
         angle = Random.Range(minAngle, maxAngle);
         dir = VectorByAngle(angle);
         actualForce = Random.Range(0f, 1f);
-        pedra.gameObject.GetComponent<Rigidbody2D>().AddForce(dir * (actualForce * maxForce), ForceMode2D.Impulse);
+        GameManager.PedraSpecs nextTipo = GameManager.Instance.NextPedra(gameObject);
+        if (nextTipo.tipo != Pedra.Tipos.Nada)
+        {
+            GameObject newPedra = Instantiate(prefabPedra, vetor.transform.GetChild(0).position, Quaternion.identity, GameObject.Find("Pedras").transform);
+            newPedra.GetComponent<Pedra>().tipo = nextTipo.tipo;
+            newPedra.GetComponent<Pedra>().cor = nextTipo.cor;
+            newPedra.gameObject.GetComponent<Rigidbody2D>().AddForce(dir * (actualForce * maxForce), ForceMode2D.Impulse);
+        }
+        interfaceManager.UpdatePedras();
+        GameManager.Instance.CanPlay = false;
     }
 
     private Vector3 VectorByAngle(float angulo)
