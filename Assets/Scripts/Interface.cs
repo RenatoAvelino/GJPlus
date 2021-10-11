@@ -14,7 +14,8 @@ public class Interface : MonoBehaviour
 
     void Start()
     {
-
+        pontosJogador1.text = 0.ToString();
+        pontosJogador2.text = 0.ToString();
     }
 
     // Update is called once per frame
@@ -23,9 +24,10 @@ public class Interface : MonoBehaviour
 
     }
 
-    public void UpdateScore()
+    public void UpdateScore(int score1, int score2)
     {
-       
+        pontosJogador1.text = score1.ToString();
+        pontosJogador2.text = score2.ToString();
     }
 
     public void UpdatePedras()

@@ -47,7 +47,7 @@ public class Pedra : MonoBehaviour
         spriteRenderer.sprite = GameManager.Instance.GetPedraSprite(tipo);
 
         fatorVelocidade = Velocidade / rb.velocity.magnitude;
-
+        print(rb.drag);
         if (tipo == Tipos.Leve)
         {
             rb.drag = 1f;

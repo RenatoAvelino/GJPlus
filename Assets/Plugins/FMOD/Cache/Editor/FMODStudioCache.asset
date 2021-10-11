@@ -1,208 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8978893825979143469
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Musica
-  m_EditorClassIdentifier: 
-  Path: event:/Musica
-  guid: db872c436599cc408ea362afd25e5e42
-  Banks:
-  - {fileID: -7425233329199028674}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 108387
---- !u!114 &-7618214081347482811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Escorrega/Velocidade
-  m_EditorClassIdentifier: 
-  Name: Velocidade
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &-7433756035236975402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/Pontua\xE7\xE3oMais3"
-  m_EditorClassIdentifier: 
-  Path: "event:/Pontua\xE7\xE3oMais3"
-  guid: 14d007f6bfa10949ba6db6daceb5680c
-  Banks:
-  - {fileID: -7425233329199028674}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 2000
---- !u!114 &-7425233329199028674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/Audio/FmodSession/Build/Desktop/Master.bank
-  Name: Master
-  lastModified: 637695079665277178
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &-5447035621614826949
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/ImpactoPedraPedra/VelocidadeImpacto
-  m_EditorClassIdentifier: 
-  Name: VelocidadeImpacto
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-<<<<<<< Updated upstream
-  Exists: 0
-=======
-  Exists: 1
---- !u!114 &-5354505429559982868
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/ImpactoPedraObstaculo/VelocidadeImpacto
-  m_EditorClassIdentifier: 
-  Name: VelocidadeImpacto
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
->>>>>>> Stashed changes
---- !u!114 &-5172415746557362612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/Pontua\xE7\xE3oMenos1"
-  m_EditorClassIdentifier: 
-  Path: "event:/Pontua\xE7\xE3oMenos1"
-  guid: 6b2155e77786f44a8ad694180a9e2a78
-  Banks:
-  - {fileID: -7425233329199028674}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 2000
---- !u!114 &-2789730410818282587
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/Pontua\xE7\xE3oMais2"
-  m_EditorClassIdentifier: 
-  Path: "event:/Pontua\xE7\xE3oMais2"
-  guid: 29275d77c20a924c973e662e2d8aa7d5
-  Banks:
-  - {fileID: -7425233329199028674}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 2000
---- !u!114 &-1192400781161133237
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/ImpactoPedraObstaculo
-  m_EditorClassIdentifier: 
-  Path: event:/ImpactoPedraObstaculo
-  guid: 0b00611dae5a8140a3328cbb5f6374ef
-  Banks:
-  - {fileID: -7425233329199028674}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-<<<<<<< Updated upstream
-  - {fileID: -375393674722647663}
-=======
-  - {fileID: -5354505429559982868}
->>>>>>> Stashed changes
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 2000
---- !u!114 &-813593681311284293
+--- !u!114 &-8806597224920187250
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -217,139 +15,16 @@ MonoBehaviour:
   Path: event:/ImpactoPedraPedra
   guid: 0330299230d8654a97423e8f23235fea
   Banks:
-  - {fileID: -7425233329199028674}
+  - {fileID: 9132045298609375142}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-<<<<<<< Updated upstream
-  - {fileID: -35265549038190129}
-=======
-  - {fileID: 7052435711927556681}
->>>>>>> Stashed changes
+  - {fileID: 8477324940691949735}
   MinDistance: 0
   MaxDistance: 0
   Length: 1000
---- !u!114 &-375393674722647663
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/ImpactoPedraObstaculo/VelocidadeImpacto
-  m_EditorClassIdentifier: 
-  Name: VelocidadeImpacto
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &-35265549038190129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/ImpactoPedraPedra/VelocidadeImpacto
-  m_EditorClassIdentifier: 
-  Name: VelocidadeImpacto
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
-  m_Name: FMODStudioCache
-  m_EditorClassIdentifier: 
-  EditorBanks:
-  - {fileID: 8050367820506891853}
-  - {fileID: -7425233329199028674}
-  EditorEvents:
-  - {fileID: -813593681311284293}
-  - {fileID: -1192400781161133237}
-  - {fileID: -7433756035236975402}
-  - {fileID: -2789730410818282587}
-  - {fileID: 1802870704235140696}
-  - {fileID: -5172415746557362612}
-  - {fileID: -8978893825979143469}
-  - {fileID: 5535535761399674006}
-  EditorParameters: []
-  MasterBanks:
-  - {fileID: -7425233329199028674}
-  StringsBanks:
-  - {fileID: 8050367820506891853}
-  stringsBankWriteTime: 637695079665287154
-  cacheVersion: 5
---- !u!114 &1186829221958060456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Escorrega/Velocidade
-  m_EditorClassIdentifier: 
-  Name: Velocidade
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
---- !u!114 &1802870704235140696
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Escorrega
-  m_EditorClassIdentifier: 
-  Path: event:/Escorrega
-  guid: 556b0fb6dfe344419a5eb7ef596c51ea
-  Banks:
-  - {fileID: -7425233329199028674}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-<<<<<<< Updated upstream
-  - {fileID: -7618214081347482811}
-=======
-  - {fileID: 7359312002784396303}
->>>>>>> Stashed changes
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 4000
---- !u!114 &5535535761399674006
+--- !u!114 &-5327797166225364675
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -364,7 +39,7 @@ MonoBehaviour:
   Path: "event:/Pontua\xE7\xE3oMais1"
   guid: fe56f59048a82848888e31251d47039b
   Banks:
-  - {fileID: -7425233329199028674}
+  - {fileID: 9132045298609375142}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -372,7 +47,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2000
---- !u!114 &7052435711927556681
+--- !u!114 &-4398590263017026226
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -381,18 +56,123 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/ImpactoPedraPedra/VelocidadeImpacto
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Pontua\xE7\xE3oMais3"
   m_EditorClassIdentifier: 
-  Name: VelocidadeImpacto
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &7359312002784396303
+  Path: "event:/Pontua\xE7\xE3oMais3"
+  guid: 14d007f6bfa10949ba6db6daceb5680c
+  Banks:
+  - {fileID: 9132045298609375142}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2000
+--- !u!114 &-1509458048856500333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Escorrega
+  m_EditorClassIdentifier: 
+  Path: event:/Escorrega
+  guid: 556b0fb6dfe344419a5eb7ef596c51ea
+  Banks:
+  - {fileID: 9132045298609375142}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 3272125153489000864}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 4000
+--- !u!114 &-964521052316962859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Pontua\xE7\xE3oMenos1"
+  m_EditorClassIdentifier: 
+  Path: "event:/Pontua\xE7\xE3oMenos1"
+  guid: 6b2155e77786f44a8ad694180a9e2a78
+  Banks:
+  - {fileID: 9132045298609375142}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2000
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: 4994341400975875011}
+  - {fileID: 9132045298609375142}
+  EditorEvents:
+  - {fileID: -8806597224920187250}
+  - {fileID: 2777850081137348534}
+  - {fileID: -4398590263017026226}
+  - {fileID: 6436147122197241286}
+  - {fileID: -1509458048856500333}
+  - {fileID: -964521052316962859}
+  - {fileID: 4736451470797306905}
+  - {fileID: -5327797166225364675}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: 9132045298609375142}
+  StringsBanks:
+  - {fileID: 4994341400975875011}
+  stringsBankWriteTime: 637695079665287154
+  cacheVersion: 5
+--- !u!114 &2777850081137348534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ImpactoPedraObstaculo
+  m_EditorClassIdentifier: 
+  Path: event:/ImpactoPedraObstaculo
+  guid: 0b00611dae5a8140a3328cbb5f6374ef
+  Banks:
+  - {fileID: 9132045298609375142}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 5269860552537411435}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2000
+--- !u!114 &3272125153489000864
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -412,7 +192,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &7524126604836513796
+--- !u!114 &4736451470797306905
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -421,18 +201,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/ImpactoPedraObstaculo/VelocidadeImpacto
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Musica
   m_EditorClassIdentifier: 
-  Name: VelocidadeImpacto
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
---- !u!114 &8050367820506891853
+  Path: event:/Musica
+  guid: db872c436599cc408ea362afd25e5e42
+  Banks:
+  - {fileID: 9132045298609375142}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 108387
+--- !u!114 &4994341400975875011
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -451,4 +234,85 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 1168
+  Exists: 1
+--- !u!114 &5269860552537411435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ImpactoPedraObstaculo/VelocidadeImpacto
+  m_EditorClassIdentifier: 
+  Name: VelocidadeImpacto
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &6436147122197241286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Pontua\xE7\xE3oMais2"
+  m_EditorClassIdentifier: 
+  Path: "event:/Pontua\xE7\xE3oMais2"
+  guid: 29275d77c20a924c973e662e2d8aa7d5
+  Banks:
+  - {fileID: 9132045298609375142}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2000
+--- !u!114 &8477324940691949735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ImpactoPedraPedra/VelocidadeImpacto
+  m_EditorClassIdentifier: 
+  Name: VelocidadeImpacto
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &9132045298609375142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FmodSession/Build/Desktop/Master.bank
+  Name: Master
+  lastModified: 637695141732739716
+  LoadResult: 0
+  FileSizes: []
   Exists: 1
