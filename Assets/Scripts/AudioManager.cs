@@ -4,10 +4,17 @@ using System;
 
 public class AudioManager : MonoBehaviour
 {
-
+    public static AudioManager instance;
     void Awake()
     {
-    DontDestroyOnLoad(gameObject);
+        if (instance == null)
+            instance = this;
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+        DontDestroyOnLoad(gameObject);
 
     }
 }
