@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &239733422370679850
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 239733422370679860}
+  - component: {fileID: 239733422370679851}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &239733422370679860
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239733422370679850}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &239733422370679851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239733422370679850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5fc5a93358f7ee459ca87b7912a0a3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: ContatoBolaBola
+    clip: {fileID: 8300000, guid: 837ad600b61748144aa9b52638dc2308, type: 3}
+    volume: 0.295
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ContatoBolaParede
+    clip: {fileID: 8300000, guid: 713db79447c01104797105549e03f41c, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Musica
+    clip: {fileID: 8300000, guid: fd5f9053455116046a2e698fcd52462e, type: 3}
+    volume: 0.541
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: PontuacaoMenos1
+    clip: {fileID: 8300000, guid: 91a5f1e88c559b34f8cb4512b4d14517, type: 3}
+    volume: 0.443
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: PontuacaoMais1
+    clip: {fileID: 8300000, guid: 508404036d4f1434ea12d8cad3bf4d22, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: PontuacaoMais2
+    clip: {fileID: 8300000, guid: 238d8cd9ae0aa0140ad05803d0c922ab, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: PontuacaoMais3
+    clip: {fileID: 8300000, guid: 6d74f8bd75ed63542919c06b43d2a728, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
