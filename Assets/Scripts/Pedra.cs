@@ -82,4 +82,16 @@ public class Pedra : MonoBehaviour
     {
         _ultimoPingo.GetComponent<CircleCollider2D>().radius = 0.1f;
     }
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Pedra")
+        {
+            print("bateu");
+            FindObjectOfType<AudioManager>().Play("ContatoBolaBola");
+        }
+        else if (collision.gameObject.tag == "Untagged")
+        {
+            FindObjectOfType<AudioManager>().Play("ContatoBolaParede");
+        }
+    }
 }
