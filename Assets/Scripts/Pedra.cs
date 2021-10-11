@@ -7,9 +7,9 @@ public class Pedra : MonoBehaviour
     [SerializeField]
     public Rigidbody2D rb;
 
-    public enum Tipos { Leve, Medio, Pesado, Prender, Nada}
+    public enum Tipos { Leve, Medio, Pesado, Prender, Nada }
     public Tipos tipo;
-    public enum Cores { Amarelo, Azul, Roxo, Verde}
+    public enum Cores { Amarelo, Azul, Roxo, Verde }
     public Cores cor;
 
     public int _indexOwner; //Player 1 = 0, Player 2 = 1
@@ -25,11 +25,28 @@ public class Pedra : MonoBehaviour
 
     public SpriteRenderer spriteRenderer;
 
+    [FMODUnity.EventRef]
+    public string PedraImpactoPedra = "event:/ImpactoPedraPedra";
+    public string PedraImpactoObstaculo = "event:/ImpactoPedraObstaculo";
+    public string Escorrega = "event:/Escorrega";
+
+    FMOD.Studio.EventInstance EventoImpactoPedra;
+    FMOD.Studio.EventInstance EventoImpactoObstaculo;
+    FMOD.Studio.EventInstance EventoEscorrega;
+
+    float Velocidade = 1;
+    float fatorVelocidade;
 
     // Start is called before the first frame update
     void Start()
     {
+        EventoImpactoPedra = FMODUnity.RuntimeManager.CreateInstance(PedraImpactoPedra);
+        EventoImpactoObstaculo = FMODUnity.RuntimeManager.CreateInstance(PedraImpactoObstaculo);
+        EventoEscorrega = FMODUnity.RuntimeManager.CreateInstance(Escorrega);
+        EventoEscorrega.start();
         spriteRenderer.sprite = GameManager.Instance.GetPedraSprite(tipo);
+
+        fatorVelocidade = Velocidade / rb.velocity.magnitude;
 
         if (tipo == Tipos.Leve)
         {
@@ -65,7 +82,10 @@ public class Pedra : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(rb.velocity.magnitude <= .2f)
+        Velocidade = fatorVelocidade*rb.velocity.magnitude;
+        EventoEscorrega.setParameterByName("Velocidade", Velocidade);
+
+        if (rb.velocity.magnitude <= .2f)
         {
             _isPainting = false;
             rb.velocity = Vector2.zero;
@@ -112,12 +132,11 @@ public class Pedra : MonoBehaviour
     {
         if (collision.gameObject.tag == "Pedra")
         {
-            print("bateu");
-            FindObjectOfType<AudioManager>().Play("ContatoBolaBola");
+            FMODUnity.RuntimeManager.PlayOneShot("event:/ImpactoPedraPedra", transform.position);
         }
         else if (collision.gameObject.tag == "Untagged")
         {
-            FindObjectOfType<AudioManager>().Play("ContatoBolaParede");
+            FMODUnity.RuntimeManager.PlayOneShot("event:/ImpactoPedraObstaculo", transform.position);
         }
     }
 }
