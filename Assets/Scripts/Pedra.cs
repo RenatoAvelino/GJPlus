@@ -31,7 +31,24 @@ public class Pedra : MonoBehaviour
     {
         spriteRenderer.sprite = GameManager.Instance.GetPedraSprite(tipo);
 
-        if(cor == Cores.Amarelo)
+        if (tipo == Tipos.Leve)
+        {
+            rb.drag = 0.5f;
+        }
+        if (tipo == Tipos.Medio)
+        {
+            rb.drag = 1f;
+        }
+        if (tipo == Tipos.Pesado)
+        {
+            rb.drag = 2f;
+        }
+        if (tipo == Tipos.Prender)
+        {
+            rb.drag = 1f;
+        }
+
+        if (cor == Cores.Amarelo)
         {
             spriteRenderer.color = Color.yellow;
             _rastro = rastroAmarelo;
