@@ -143,18 +143,6 @@ PrefabInstance:
       propertyPath: score
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4882882422241964967, guid: 41045e6ca49978d42a8df5dfbe738d0f, type: 3}
-      propertyPath: m_Color.b
-      value: 0.8037815
-      objectReference: {fileID: 0}
-    - target: {fileID: 4882882422241964967, guid: 41045e6ca49978d42a8df5dfbe738d0f, type: 3}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4882882422241964967, guid: 41045e6ca49978d42a8df5dfbe738d0f, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41045e6ca49978d42a8df5dfbe738d0f, type: 3}
 --- !u!4 &7401529904090951432 stripped

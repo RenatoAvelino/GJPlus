@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -28,6 +29,8 @@ public class GameManager : MonoBehaviour
     public Sprite spritePrender;
 
     public bool CanPlay = true;
+
+    public int currentLevel = 0;
 
     #region SINGLETOM
     public static GameManager _instance;
@@ -154,6 +157,18 @@ public class GameManager : MonoBehaviour
     {
         turno++;
         player1Jogando = !player1Jogando;
+        if(turno == 7)
+        {
+            NextLevel();
+        }
+    }
+
+    private void NextLevel()
+    {
+        currentLevel += 1;
+        SceneManager.LoadScene(currentLevel);
+        //Reset Score
+        //Reset
     }
 
     public Sprite GetPedraSprite(Pedra.Tipos tipo)

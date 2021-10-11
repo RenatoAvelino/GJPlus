@@ -33,19 +33,19 @@ public class Pedra : MonoBehaviour
 
         if (tipo == Tipos.Leve)
         {
-            rb.drag = 0.5f;
+            rb.drag = 1f;
         }
         if (tipo == Tipos.Medio)
         {
-            rb.drag = 1f;
+            rb.drag = 2f;
         }
         if (tipo == Tipos.Pesado)
         {
-            rb.drag = 2f;
+            rb.drag = 3f;
         }
         if (tipo == Tipos.Prender)
         {
-            rb.drag = 1f;
+            rb.drag = 2f;
         }
 
         if (cor == Cores.Amarelo)

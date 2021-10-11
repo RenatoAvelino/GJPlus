@@ -48,10 +48,10 @@ public class PlayerController : MonoBehaviour
         else
             medidor.transform.position = new Vector3(transform.position.x - 1, medidor.transform.position.y, medidor.transform.position.z);
 
-        horizontalInput = Input.GetAxisRaw("Horizontal");
-        transform.position += new Vector3(horizontalInput, 0f, 0f) * Time.deltaTime;
         if (GameManager.Instance.CanPlay && GameManager.Instance.player1Jogando)
         {
+            horizontalInput = Input.GetAxisRaw("Horizontal");
+            transform.position += new Vector3(horizontalInput, 0f, 0f) * Time.deltaTime;
             GetComponent<SpriteRenderer>().color = Color.cyan;
             leftMouseButton = Input.GetMouseButton(0);
             PercentageGetter();
