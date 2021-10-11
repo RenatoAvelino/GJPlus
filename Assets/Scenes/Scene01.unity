@@ -169,28 +169,28 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: fd5f9053455116046a2e698fcd52462e, type: 3}
     volume: 0.541
     pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: PontuacaoMenos1
+    clip: {fileID: 8300000, guid: 91a5f1e88c559b34f8cb4512b4d14517, type: 3}
+    volume: 0.443
+    pitch: 0
     loop: 0
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
+  - name: PontuacaoMais1
+    clip: {fileID: 8300000, guid: 508404036d4f1434ea12d8cad3bf4d22, type: 3}
     volume: 0
     pitch: 0
     loop: 0
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
+  - name: PontuacaoMais2
+    clip: {fileID: 8300000, guid: 238d8cd9ae0aa0140ad05803d0c922ab, type: 3}
     volume: 0
     pitch: 0
     loop: 0
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
-    loop: 0
-    source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
+  - name: PontuacaoMais3
+    clip: {fileID: 8300000, guid: 6d74f8bd75ed63542919c06b43d2a728, type: 3}
     volume: 0
     pitch: 0
     loop: 0
