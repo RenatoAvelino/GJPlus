@@ -31,6 +31,7 @@ public class Anel : MonoBehaviour
             int index = tmp.GetComponent<Pedra>()._indexOwner;
             //Debug.Log(index + " Entrou");
             _gc.SetScore(index, score);
+            FindObjectOfType<AudioManager>().Play("PontuacaoMais1");
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
