@@ -157,7 +157,7 @@ public class GameManager : MonoBehaviour
     {
         turno++;
         player1Jogando = !player1Jogando;
-        if(turno == 7)
+        if(turno == 6)
         {
             NextLevel();
         }

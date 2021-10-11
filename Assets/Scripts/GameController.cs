@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     // Start is called before the first frame update
-    private int[] _playerScore = new int[2];
+    public int[] _playerScore = new int[2];
 
     public Interface interfaceManager;
     void Start()
