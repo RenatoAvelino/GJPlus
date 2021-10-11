@@ -5,7 +5,7 @@
 			<value>ImpactoPedraPedra</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{c752dacd-2399-4c6a-984b-68afa09e4873}</destination>
@@ -137,7 +137,9 @@
 	</object>
 	<object class="MixerBusEffectChain" id="{40621a90-ee49-4959-af4b-cc4b4656e6e0}">
 		<relationship name="effects">
+			<destination>{24b5ae99-f98b-46a3-b370-53ae68f8afbb}</destination>
 			<destination>{943a9941-e389-4297-9dd3-db0b2cb76d61}</destination>
+			<destination>{cce145ac-c015-4459-81b7-59abb40a1553}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{e1edbd44-13b6-4e1a-8ba0-52ab90142e9d}" />
@@ -184,7 +186,32 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{3c3fb78a-275d-404f-94b0-f7fa50508e0e}" />
+	<object class="CompressorEffect" id="{24b5ae99-f98b-46a3-b370-53ae68f8afbb}">
+		<property name="threshold">
+			<value>-7</value>
+		</property>
+		<property name="ratio">
+			<value>50</value>
+		</property>
+		<property name="attackTime">
+			<value>0.100000001</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{943a9941-e389-4297-9dd3-db0b2cb76d61}" />
+	<object class="SpatialiserEffect" id="{cce145ac-c015-4459-81b7-59abb40a1553}">
+		<property name="maximumDistance">
+			<value>65</value>
+		</property>
+		<property name="extentMode">
+			<value>1</value>
+		</property>
+		<property name="soundSize">
+			<value>4.20000029</value>
+		</property>
+		<property name="minimumExtent">
+			<value>132</value>
+		</property>
+	</object>
 	<object class="AutomationPoint" id="{b6a28a28-fd0a-4334-85bf-061705ccfbd5}">
 		<property name="position">
 			<value>0.4375</value>

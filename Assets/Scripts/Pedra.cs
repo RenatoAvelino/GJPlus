@@ -30,23 +30,29 @@ public class Pedra : MonoBehaviour
     public string PedraImpactoObstaculo = "event:/ImpactoPedraObstaculo";
     public string Escorrega = "event:/Escorrega";
 
+    float fatorVelocidade = 0.03f;
+    float impactoVelocidade;
+
     FMOD.Studio.EventInstance EventoImpactoPedra;
     FMOD.Studio.EventInstance EventoImpactoObstaculo;
     FMOD.Studio.EventInstance EventoEscorrega;
 
-    float Velocidade = 1;
-    float fatorVelocidade;
+    float Velocidade;
 
     // Start is called before the first frame update
     void Start()
     {
+        Velocidade = fatorVelocidade * rb.velocity.magnitude;
         EventoImpactoPedra = FMODUnity.RuntimeManager.CreateInstance(PedraImpactoPedra);
         EventoImpactoObstaculo = FMODUnity.RuntimeManager.CreateInstance(PedraImpactoObstaculo);
         EventoEscorrega = FMODUnity.RuntimeManager.CreateInstance(Escorrega);
         EventoEscorrega.start();
-        spriteRenderer.sprite = GameManager.Instance.GetPedraSprite(tipo);
+        EventoEscorrega.setParameterByName("Velocidade", Velocidade);
 
-        fatorVelocidade = Velocidade / rb.velocity.magnitude;
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(EventoEscorrega, transform, rb);
+       
+
+        spriteRenderer.sprite = GameManager.Instance.GetPedraSprite(tipo);
 
         if (tipo == Tipos.Leve)
         {
@@ -132,11 +138,21 @@ public class Pedra : MonoBehaviour
     {
         if (collision.gameObject.tag == "Pedra")
         {
-            FMODUnity.RuntimeManager.PlayOneShot("event:/ImpactoPedraPedra", transform.position);
+            impactoVelocidade = Velocidade;
+            FMODUnity.RuntimeManager.AttachInstanceToGameObject(EventoImpactoPedra, transform, rb);
+            EventoImpactoPedra.setParameterByName("VelocidadeImpacto", impactoVelocidade);
+            EventoImpactoPedra.start();
         }
         else if (collision.gameObject.tag == "Untagged")
         {
-            FMODUnity.RuntimeManager.PlayOneShot("event:/ImpactoPedraObstaculo", transform.position);
+            impactoVelocidade = Velocidade;
+            FMODUnity.RuntimeManager.AttachInstanceToGameObject(EventoImpactoObstaculo, transform, rb);
+            EventoImpactoObstaculo.setParameterByName("VelocidadeImpacto", impactoVelocidade);
+            EventoImpactoObstaculo.start();
+        }
+        else if (collision.gameObject.tag == "Respawn")
+        {
+
         }
     }
 }

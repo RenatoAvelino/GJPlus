@@ -11,8 +11,16 @@ public class Anel : MonoBehaviour
     public GameController _gc;
     [SerializeField]
     private int score;
+
+    [FMODUnity.EventRef]
+    public string Pontos = "event:/Pontuacao";
+    FMOD.Studio.EventInstance PontosEvento;
+
+
     void Start()
     {
+        PontosEvento = FMODUnity.RuntimeManager.CreateInstance(Pontos);
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(PontosEvento, transform, new Rigidbody2D ());
         _ring = this.GetComponent<CircleCollider2D>();
         _ring.radius = Radius;
     }
@@ -27,22 +35,25 @@ public class Anel : MonoBehaviour
     {
         if (collision.gameObject.tag == "Pedra")
         {
+            PontosEvento.setParameterByName("Pontos", score);
+            PontosEvento.start();
             GameObject tmp = collision.gameObject;
             int index = tmp.GetComponent<Pedra>()._indexOwner;
             //Debug.Log(index + " Entrou");
             _gc.SetScore(index, score);
-            FindObjectOfType<AudioManager>().Play("PontuacaoMais1");
+            
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Pedra")
         {
+            PontosEvento.setParameterByName("Pontos", 0);
+            PontosEvento.start();
             GameObject tmp = collision.gameObject;
             int index = tmp.GetComponent<Pedra>()._indexOwner;
             //Debug.Log(index + " Saiu");
             _gc.SetScore(index, score * (-1));
-            FindObjectOfType<AudioManager>().Play("PontuacaoMenos1");
         }
     }
 }

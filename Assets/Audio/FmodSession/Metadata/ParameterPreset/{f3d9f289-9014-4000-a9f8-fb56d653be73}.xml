@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{f3d9f289-9014-4000-a9f8-fb56d653be73}">
+		<property name="name">
+			<value>Pontos</value>
+		</property>
+		<relationship name="folder">
+			<destination>{4ce56b80-1900-4240-831e-3fda06a6e258}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{d2170c23-b962-4703-bc52-25f1bf1c768b}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{d2170c23-b962-4703-bc52-25f1bf1c768b}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>4</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
