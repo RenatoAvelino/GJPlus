@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2305930400266229329}
   m_Layer: 0
   m_Name: Pedra
-  m_TagString: Untagged
+  m_TagString: Pedra
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -142,3 +142,4 @@ MonoBehaviour:
   _paintDelay: 0.8
   rastroAmarelo: {fileID: 4631339960169368107, guid: e4e38d0b18e6b744f81f85ba2b10b6f4, type: 3}
   rastroAzul: {fileID: 6295568827644532607, guid: 9ad06e60f8777e748b1c8cfdfcc0dd86, type: 3}
+  spriteRenderer: {fileID: 0}
