@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
 
     public bool CanPlay = true;
 
-    public int currentLevel = 0;
+    public int currentLevel = 1;
 
     #region SINGLETOM
     public static GameManager _instance;
