@@ -41,6 +41,7 @@ public class Anel : MonoBehaviour
             int index = tmp.GetComponent<Pedra>()._indexOwner;
             //Debug.Log(index + " Saiu");
             _gc.SetScore(index, score * (-1));
+            FindObjectOfType<AudioManager>().Play("PontuacaoMenos1");
         }
     }
 }
