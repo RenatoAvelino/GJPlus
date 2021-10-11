@@ -23,6 +23,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 108387
+--- !u!114 &-7618214081347482811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Escorrega/Velocidade
+  m_EditorClassIdentifier: 
+  Name: Velocidade
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-7433756035236975402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,7 +80,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/Audio/FmodSession/Build/Desktop/Master.bank
   Name: Master
-  lastModified: 637695073129353084
+  lastModified: 637695079665277178
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -83,7 +103,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-5172415746557362612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,7 +170,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 7524126604836513796}
+  - {fileID: -375393674722647663}
   MinDistance: 0
   MaxDistance: 0
   Length: 2000
@@ -174,10 +194,50 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -5447035621614826949}
+  - {fileID: -35265549038190129}
   MinDistance: 0
   MaxDistance: 0
   Length: 1000
+--- !u!114 &-375393674722647663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ImpactoPedraObstaculo/VelocidadeImpacto
+  m_EditorClassIdentifier: 
+  Name: VelocidadeImpacto
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-35265549038190129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ImpactoPedraPedra/VelocidadeImpacto
+  m_EditorClassIdentifier: 
+  Name: VelocidadeImpacto
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,7 +267,7 @@ MonoBehaviour:
   - {fileID: -7425233329199028674}
   StringsBanks:
   - {fileID: 8050367820506891853}
-  stringsBankWriteTime: 637695073129392959
+  stringsBankWriteTime: 637695079665287154
   cacheVersion: 5
 --- !u!114 &1186829221958060456
 MonoBehaviour:
@@ -228,7 +288,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &1802870704235140696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,7 +309,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 1186829221958060456}
+  - {fileID: -7618214081347482811}
   MinDistance: 0
   MaxDistance: 0
   Length: 4000
@@ -295,7 +355,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &8050367820506891853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,7 +370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/Audio/FmodSession/Build/Desktop/Master.strings.bank
   Name: Master.strings
-  lastModified: 637695073129392959
+  lastModified: 637695079665287154
   LoadResult: 0
   FileSizes:
   - Name: Desktop
