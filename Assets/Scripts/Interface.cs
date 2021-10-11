@@ -23,7 +23,7 @@ public class Interface : MonoBehaviour
 
     }
 
-    public void UpdatePontos()
+    public void UpdateScore()
     {
        
     }

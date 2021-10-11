@@ -1031,7 +1031,7 @@ MonoBehaviour:
   mainCamera: {fileID: 0}
   medidor: {fileID: 2471031498762805396}
   vetor: {fileID: 2471031498487043337}
-  prefabPedra: {fileID: 2305930400266229330, guid: 02e695e6b4b760b4299b014fb560c524, type: 3}
+  prefabPedra: {fileID: 1530009346342616780, guid: 81a5685729b61444ead37f737b8a1c32, type: 3}
   interfaceManager: {fileID: 0}
   paredeMask:
     serializedVersion: 2
@@ -1177,8 +1177,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 504a5e95a50cf774ca91ee74ae7ba31a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pedrasJogador1: 000000000000000000000000
-  pedrasJogador2: 000000000000000000000000
   pedraSelecionadaJogador1: 0
   pedraSelecionadaJogador2: 0
   turno: 0
@@ -1189,6 +1187,7 @@ MonoBehaviour:
   spriteMedio: {fileID: -747815920019087859, guid: 9a35350725bbf03419475691224aabb6, type: 3}
   spritePesado: {fileID: 6483974075326832851, guid: 9a35350725bbf03419475691224aabb6, type: 3}
   spritePrender: {fileID: 7636654539494947244, guid: 9a35350725bbf03419475691224aabb6, type: 3}
+  CanPlay: 1
 --- !u!1 &2471031498448122087
 GameObject:
   m_ObjectHideFlags: 0
@@ -1522,6 +1521,7 @@ MonoBehaviour:
   minAngle: -180
   maxAngle: 0
   targetPedra: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1 &2471031498663987858
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 2305930400266229359}
   - component: {fileID: 2305930400266229328}
   - component: {fileID: 2305930400266229329}
-  - component: {fileID: 2305930400266229356}
   m_Layer: 0
   m_Name: Pedra
   m_TagString: Untagged
@@ -74,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 18
   m_Sprite: {fileID: -747815920019087859, guid: 9a35350725bbf03419475691224aabb6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -135,21 +134,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80380f2bdf0d91748a8d423990e27b7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 0}
   tipo: 0
---- !u!114 &2305930400266229356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2305930400266229330}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sharedProfile: {fileID: 11400000, guid: 7947fc907aa073b449a1d8ed26a46554, type: 2}
-  isGlobal: 0
-  blendDistance: 0
-  weight: 1
-  priority: 0
+  cor: 0
+  _indexOwner: 0
+  _rastro: {fileID: 0}
+  _paintDelay: 0.8
+  rastroAmarelo: {fileID: 4631339960169368107, guid: e4e38d0b18e6b744f81f85ba2b10b6f4, type: 3}
+  rastroAzul: {fileID: 6295568827644532607, guid: 9ad06e60f8777e748b1c8cfdfcc0dd86, type: 3}

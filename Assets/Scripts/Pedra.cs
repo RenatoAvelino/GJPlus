@@ -5,7 +5,7 @@ using UnityEngine;
 public class Pedra : MonoBehaviour
 {
     [SerializeField]
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
 
     public enum Tipos { Leve, Medio, Pesado, Prender, Nada}
     public Tipos tipo;
@@ -20,19 +20,26 @@ public class Pedra : MonoBehaviour
     private float _timer = 0;
     private bool _isPainting = true;
 
+    public GameObject rastroAmarelo;
+    public GameObject rastroAzul;
+
+    public SpriteRenderer spriteRenderer;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<SpriteRenderer>().sprite = GameManager.Instance.GetPedraSprite(tipo);
+        spriteRenderer.sprite = GameManager.Instance.GetPedraSprite(tipo);
 
         if(cor == Cores.Amarelo)
         {
-            GetComponent<SpriteRenderer>().color = Color.yellow;
+            spriteRenderer.color = Color.yellow;
+            _rastro = rastroAmarelo;
         }
         else if(cor == Cores.Azul)
         {
-            GetComponent<SpriteRenderer>().color = Color.blue;
+            spriteRenderer.color = Color.blue;
+            _rastro = rastroAzul;
         }
         rb = GetComponent<Rigidbody2D>();
 

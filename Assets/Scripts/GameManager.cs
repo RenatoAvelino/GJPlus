@@ -27,6 +27,8 @@ public class GameManager : MonoBehaviour
     public Sprite spritePesado;
     public Sprite spritePrender;
 
+    public bool CanPlay = true;
+
     #region SINGLETOM
     public static GameManager _instance;
     public static GameManager Instance
@@ -187,6 +189,7 @@ public class GameManager : MonoBehaviour
 
     public void PedraStopped()
     {
+        CanPlay = true;
         ProximoTurno();
     }
 }

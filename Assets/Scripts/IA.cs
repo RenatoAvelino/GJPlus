@@ -18,6 +18,7 @@ public class IA : MonoBehaviour
 
     [Header("Objetos")]
     public Pedra targetPedra;
+    public GameObject player;
 
     void Start()
     {
@@ -27,7 +28,9 @@ public class IA : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (GameManager.Instance.CanPlay && !GameManager.Instance.player1Jogando)
+        {
+        }
     }
 
     public void Arremesso(Pedra pedra)
@@ -49,12 +52,12 @@ public class IA : MonoBehaviour
     //    GUI.Label(new Rect(0, 0, Screen.width, Screen.height), dir.ToString(), GUI.skin.label);
     //}
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.green;
-        Gizmos.DrawLine(transform.position, transform.position + dir.normalized * 5);
-        Gizmos.color = Color.blue;
-        Gizmos.DrawLine(transform.position, transform.position + VectorByAngle(minAngle) * 5);
-        Gizmos.DrawLine(transform.position, transform.position + VectorByAngle(maxAngle) * 5);
-    }
+    //private void OnDrawGizmos()
+    //{
+    //    Gizmos.color = Color.green;
+    //    Gizmos.DrawLine(transform.position, transform.position + dir.normalized * 5);
+    //    Gizmos.color = Color.blue;
+    //    Gizmos.DrawLine(transform.position, transform.position + VectorByAngle(minAngle) * 5);
+    //    Gizmos.DrawLine(transform.position, transform.position + VectorByAngle(maxAngle) * 5);
+    //}
 }

@@ -131,9 +131,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
   tipo: 0
+  cor: 0
   _indexOwner: 0
-  _rastro: {fileID: 0}
+  _rastro: {fileID: 1530009346342616780}
   _paintDelay: 0.8
+  rastroAmarelo: {fileID: 4631339960169368107, guid: e4e38d0b18e6b744f81f85ba2b10b6f4, type: 3}
+  rastroAzul: {fileID: 6295568827644532607, guid: 9ad06e60f8777e748b1c8cfdfcc0dd86, type: 3}
+  spriteRenderer: {fileID: 1530009345622074878}
 --- !u!50 &1530009346342616778
 Rigidbody2D:
   serializedVersion: 4
@@ -164,7 +168,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 1530009346342616780}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: f95822fe9e357d94ca87b4907ec10e1b, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0

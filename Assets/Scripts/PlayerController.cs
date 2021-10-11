@@ -49,14 +49,18 @@ public class PlayerController : MonoBehaviour
 
         horizontalInput = Input.GetAxisRaw("Horizontal");
         transform.position += new Vector3(horizontalInput, 0f, 0f) * Time.deltaTime;
-        leftMouseButton = Input.GetMouseButton(0);
-        PercentageGetter();
-        if (Input.GetMouseButtonUp(0))
+        if (GameManager.Instance.CanPlay && GameManager.Instance.player1Jogando)
         {
-            Arremesso();
-            actualForce = 0f;
-            medidor.UpdateMedidor(actualForce);
-            vetor.transform.rotation = Quaternion.AngleAxis(0f, Vector3.forward);
+            GetComponent<SpriteRenderer>().color = Color.cyan;
+            leftMouseButton = Input.GetMouseButton(0);
+            PercentageGetter();
+            if (Input.GetMouseButtonUp(0))
+            {
+                Arremesso();
+                actualForce = 0f;
+                medidor.UpdateMedidor(actualForce);
+                vetor.transform.rotation = Quaternion.AngleAxis(0f, Vector3.forward);
+            }
         }
     }
 
@@ -74,6 +78,7 @@ public class PlayerController : MonoBehaviour
             newPedra.gameObject.GetComponent<Rigidbody2D>().AddForce(direction * (actualForce * maxForce), ForceMode2D.Impulse);
         }
         interfaceManager.UpdatePedras();
+        GameManager.Instance.CanPlay = false;
     }
 
     private void PercentageGetter()
