@@ -78,7 +78,7 @@ public class PlayerController : MonoBehaviour
             indexPedra++;
             newPedra.GetComponent<Pedra>().tipo = nextTipo.tipo;
             newPedra.GetComponent<Pedra>().cor = nextTipo.cor;
-            newPedra.gameObject.GetComponent<Rigidbody2D>().AddForce(direction * (actualForce * maxForce), ForceMode2D.Impulse);
+            newPedra.GetComponent<Pedra>().force = direction * (actualForce * maxForce);
         }
         interfaceManager.UpdatePedras();
         GameManager.Instance.CanPlay = false;

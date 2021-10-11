@@ -56,7 +56,7 @@ public class IA : MonoBehaviour
             newPedra.name = newPedra.name + indexPedra;
             indexPedra++;
             newPedra.GetComponent<Pedra>().cor = nextTipo.cor;
-            newPedra.gameObject.GetComponent<Rigidbody2D>().AddForce(dir * (actualForce * maxForce), ForceMode2D.Impulse);
+            newPedra.GetComponent<Pedra>().force = dir * (actualForce * maxForce);
         }
         interfaceManager.UpdatePedras();
         GameManager.Instance.CanPlay = false;

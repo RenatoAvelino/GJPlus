@@ -267,6 +267,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 468994251, guid: 3c0a6b28470dc2d478efb8c155ece6b1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2471031497398027198, guid: 3c0a6b28470dc2d478efb8c155ece6b1, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -22
@@ -486,6 +490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cf6009768a03fe48b89b09208f4dba1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerScore: 0000000000000000
   interfaceManager: {fileID: 0}
 --- !u!1 &1084160768
 GameObject:

@@ -39,6 +39,8 @@ public class Pedra : MonoBehaviour
 
     float Velocidade;
 
+    public Vector3 force;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -60,23 +62,23 @@ public class Pedra : MonoBehaviour
 
         if (tipo == Tipos.Leve)
         {
-            rb.mass = 1f;
-            rb.drag = 1f;
+            rb.mass = 0.1f;
+            rb.drag = 0.5f;
         }
         if (tipo == Tipos.Medio)
         {
-            rb.mass = 2f;
-            rb.drag = 2f;
+            rb.mass = 0.2f;
+            rb.drag = 1f;
         }
         if (tipo == Tipos.Pesado)
         {
-            rb.mass = 3f;
-            rb.drag = 3f;
+            rb.mass = 0.3f;
+            rb.drag = 1.5f;
         }
         if (tipo == Tipos.Prender)
         {
-            rb.mass = 2f;
-            rb.drag = 2f;
+            rb.mass = 0.2f;
+            rb.drag = 1f;
         }
 
         if (cor == Cores.Amarelo)
@@ -90,6 +92,7 @@ public class Pedra : MonoBehaviour
             _rastro = rastroAzul;
         }
         rb = GetComponent<Rigidbody2D>();
+        rb.AddForce(force, ForceMode2D.Impulse);
 
     }
 
