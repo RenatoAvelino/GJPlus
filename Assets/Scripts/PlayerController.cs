@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     public Camera mainCamera;
 
     private float horizontalInput;
+    private int indexPedra = 0;
 
     [Header("Objetos")]
     //public Pedra targetPedra;
@@ -73,6 +74,8 @@ public class PlayerController : MonoBehaviour
         if(nextTipo.tipo != Pedra.Tipos.Nada)
         {
             GameObject newPedra = Instantiate(prefabPedra, vetor.transform.GetChild(0).position, Quaternion.identity, GameObject.Find("Pedras").transform);
+            newPedra.name = newPedra.name + indexPedra;
+            indexPedra++;
             newPedra.GetComponent<Pedra>().tipo = nextTipo.tipo;
             newPedra.GetComponent<Pedra>().cor = nextTipo.cor;
             newPedra.gameObject.GetComponent<Rigidbody2D>().AddForce(direction * (actualForce * maxForce), ForceMode2D.Impulse);

@@ -7,6 +7,7 @@ public class Yellow : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField]
     private float Fat = 2;
+    public string owner;
     void Start()
     {
 
@@ -19,7 +20,7 @@ public class Yellow : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Pedra")
+        if (collision.gameObject.tag == "Pedra" && collision.gameObject.name != owner)
         {
             GameObject tmp = collision.gameObject;
             tmp.GetComponent<Rigidbody2D>().drag = 1 + Fat;

@@ -11,6 +11,7 @@ public class Blue : MonoBehaviour
     private float framesToSpeed = 2;
     private GameObject pedraT;
     private bool _isTimeToSpeed = false;
+    public string owner;
     void Start()
     {
         framesToSpeed = framesToSpeed / (60.0f);
@@ -23,7 +24,7 @@ public class Blue : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Pedra")
+        if (collision.gameObject.tag == "Pedra" && collision.gameObject.name != owner)
         {
             GameObject tmp = collision.gameObject;
             tmp.GetComponent<Rigidbody2D>().drag = 1 - Fat;

@@ -74,6 +74,13 @@ public class Pedra : MonoBehaviour
         GameObject tmp = Instantiate(_rastro);
         _ultimoPingo = tmp;
         tmp.transform.position = this.transform.position;
+        if(tmp.name == "Blue(Clone)")
+        {
+            tmp.GetComponent<Blue>().owner = this.gameObject.name;
+        }else if(tmp.name == "Yellow(Clone)")
+        {
+            tmp.GetComponent<Yellow>().owner = this.gameObject.name;
+        }
         tmp.GetComponent<CircleCollider2D>().radius = 0;
         Invoke("dryPaint", _paintDelay - 0.01f);
     }

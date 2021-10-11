@@ -134,7 +134,7 @@ MonoBehaviour:
   cor: 0
   _indexOwner: 0
   _rastro: {fileID: 1530009346342616780}
-  _paintDelay: 0.8
+  _paintDelay: 0.5
   rastroAmarelo: {fileID: 4631339960169368107, guid: e4e38d0b18e6b744f81f85ba2b10b6f4, type: 3}
   rastroAzul: {fileID: 6295568827644532607, guid: 9ad06e60f8777e748b1c8cfdfcc0dd86, type: 3}
   spriteRenderer: {fileID: 1530009345622074878}
