@@ -48,10 +48,12 @@ public class Pedra : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(rb.velocity.magnitude == 0)
+        if(rb.velocity.magnitude <= .2f)
         {
             _isPainting = false;
-            if(tipo == Tipos.Prender)
+            rb.velocity = Vector2.zero;
+
+            if (tipo == Tipos.Prender)
             {
                 rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
             }

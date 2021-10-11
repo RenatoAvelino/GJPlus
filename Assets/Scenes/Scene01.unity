@@ -310,6 +310,7 @@ GameObject:
   - component: {fileID: 874557768}
   - component: {fileID: 874557767}
   - component: {fileID: 874557770}
+  - component: {fileID: 874557771}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -442,6 +443,18 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!114 &874557771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874557766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cf6009768a03fe48b89b09208f4dba1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1084160768
 GameObject:
   m_ObjectHideFlags: 0
@@ -640,6 +653,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2118428403440355683, guid: ea019552161613c4ba1fa9bccb749c64, type: 3}
+      propertyPath: _gc
+      value: 
+      objectReference: {fileID: 874557771}
     - target: {fileID: 5827191828673692991, guid: ea019552161613c4ba1fa9bccb749c64, type: 3}
       propertyPath: m_Name
       value: Anel Maior
@@ -741,6 +758,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2450547828986506100, guid: 861632bd1b1ec7b408e54efecd39eef1, type: 3}
+      propertyPath: _gc
+      value: 
+      objectReference: {fileID: 874557771}
     - target: {fileID: 4332109836154673108, guid: 861632bd1b1ec7b408e54efecd39eef1, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -789,6 +810,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Alvo (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7899239420585394136, guid: 861632bd1b1ec7b408e54efecd39eef1, type: 3}
+      propertyPath: _gc
+      value: 
+      objectReference: {fileID: 874557771}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 861632bd1b1ec7b408e54efecd39eef1, type: 3}
 --- !u!1001 &2093804806
@@ -846,6 +871,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2186454703396641938, guid: 41045e6ca49978d42a8df5dfbe738d0f, type: 3}
+      propertyPath: _gc
+      value: 
+      objectReference: {fileID: 874557771}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41045e6ca49978d42a8df5dfbe738d0f, type: 3}
 --- !u!1001 &239733422644837348
