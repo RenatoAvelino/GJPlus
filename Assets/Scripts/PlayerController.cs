@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -24,8 +23,6 @@ public class PlayerController : MonoBehaviour
     private float horizontalInput;
     private int indexPedra = 0;
 
-    private int estado = 0;
-
     [Header("Objetos")]
     //public Pedra targetPedra;
     public Medidor medidor;
@@ -37,8 +34,6 @@ public class PlayerController : MonoBehaviour
 
     public LayerMask paredeMask;
 
-    public Sprite[] sprites = new Sprite[3];
-
     void Start()
     {
         interfaceManager = GameObject.Find("Interface").GetComponent<Interface>();
@@ -47,7 +42,6 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.left, 1.5f, paredeMask, 0, 0);
         if (hit.collider)
             medidor.transform.position = new Vector3(transform.position.x + 1, medidor.transform.position.y, medidor.transform.position.z);
@@ -56,27 +50,19 @@ public class PlayerController : MonoBehaviour
 
         if (GameManager.Instance.CanPlay && GameManager.Instance.player1Jogando)
         {
-            if(estado < 0)
-                estado = 0;
             horizontalInput = Input.GetAxisRaw("Horizontal");
             transform.position += new Vector3(horizontalInput, 0f, 0f) * Time.deltaTime;
             GetComponent<SpriteRenderer>().color = Color.cyan;
             leftMouseButton = Input.GetMouseButton(0);
-            if (leftMouseButton)
-                if(estado < 1)
-                    estado = 1;
             PercentageGetter();
             if (Input.GetMouseButtonUp(0))
             {
-                estado = 2;
                 Arremesso();
                 actualForce = 0f;
                 medidor.UpdateMedidor(actualForce);
                 vetor.transform.rotation = Quaternion.AngleAxis(0f, Vector3.forward);
-                StartCoroutine(ReturnToIdle());
             }
         }
-        GetComponent<SpriteRenderer>().sprite = sprites[estado];
     }
 
     public void Arremesso()
@@ -148,12 +134,6 @@ public class PlayerController : MonoBehaviour
         if (subindo)
             yield return new WaitForSeconds(maxChargeWait);
         contando = false;
-    }
-
-    private IEnumerator ReturnToIdle()
-    {
-        yield return new WaitForSeconds(0.3f);
-        estado = 0;
     }
 
     private Vector3 VectorByAngle(float angulo)

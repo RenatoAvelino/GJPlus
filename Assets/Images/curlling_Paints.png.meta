@@ -1,22 +1,7 @@
 fileFormatVersion: 2
 guid: b224dc4d8ef47ee4b8ef02194aae2069
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 6744242780764183442
-    second: curlling_Paints_0
-  - first:
-      213: -8380340077329922320
-    second: curlling_Paints_1
-  - first:
-      213: 6413526608656875703
-    second: curlling_Paints_2
-  - first:
-      213: 7502372748024762401
-    second: curlling_Paints_4
-  - first:
-      213: 1895476605141544554
-    second: curlling_Paints_6
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -104,112 +89,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: curlling_Paints_0
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 8
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 29b117a931d589d50800000000000000
-      internalID: 6744242780764183442
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: curlling_Paints_1
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 8
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0f6c7c1c91d03bb80800000000000000
-      internalID: -8380340077329922320
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: curlling_Paints_2
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 8
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7b04282687c610950800000000000000
-      internalID: 6413526608656875703
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: curlling_Paints_4
-      rect:
-        serializedVersion: 2
-        x: 264
-        y: 8
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 120569ad348cd1860800000000000000
-      internalID: 7502372748024762401
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: curlling_Paints_6
-      rect:
-        serializedVersion: 2
-        x: 136
-        y: 8
-        width: 46
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a6e66810ee51e4a10800000000000000
-      internalID: 1895476605141544554
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []

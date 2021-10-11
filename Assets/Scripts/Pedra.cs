@@ -25,7 +25,6 @@ public class Pedra : MonoBehaviour
 
     public SpriteRenderer spriteRenderer;
 
-<<<<<<< Updated upstream
     [FMODUnity.EventRef]
     public string PedraImpactoPedra = "event:/ImpactoPedraPedra";
     public string PedraImpactoObstaculo = "event:/ImpactoPedraObstaculo";
@@ -37,12 +36,6 @@ public class Pedra : MonoBehaviour
 
     float Velocidade = 1;
     float fatorVelocidade;
-=======
-    public float dragLeve = 1f;
-    public float dragMedio = 2f;
-    public float dragPesado = 3f;
-
->>>>>>> Stashed changes
 
     // Start is called before the first frame update
     void Start()
@@ -57,19 +50,19 @@ public class Pedra : MonoBehaviour
 
         if (tipo == Tipos.Leve)
         {
-            rb.drag = dragLeve;
+            rb.drag = 1f;
         }
         if (tipo == Tipos.Medio)
         {
-            rb.drag = dragMedio;
+            rb.drag = 2f;
         }
         if (tipo == Tipos.Pesado)
         {
-            rb.drag = dragPesado;
+            rb.drag = 3f;
         }
         if (tipo == Tipos.Prender)
         {
-            rb.drag = dragMedio;
+            rb.drag = 2f;
         }
 
         if (cor == Cores.Amarelo)
