@@ -52,22 +52,30 @@ public class Pedra : MonoBehaviour
         FMODUnity.RuntimeManager.AttachInstanceToGameObject(EventoEscorrega, transform, rb);
        
 
+
         spriteRenderer.sprite = GameManager.Instance.GetPedraSprite(tipo);
+
+
+        fatorVelocidade = Velocidade / rb.velocity.magnitude;
 
         if (tipo == Tipos.Leve)
         {
+            rb.mass = 1f;
             rb.drag = 1f;
         }
         if (tipo == Tipos.Medio)
         {
+            rb.mass = 2f;
             rb.drag = 2f;
         }
         if (tipo == Tipos.Pesado)
         {
+            rb.mass = 3f;
             rb.drag = 3f;
         }
         if (tipo == Tipos.Prender)
         {
+            rb.mass = 2f;
             rb.drag = 2f;
         }
 

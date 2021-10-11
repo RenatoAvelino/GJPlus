@@ -267,6 +267,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2471031497398027198, guid: 3c0a6b28470dc2d478efb8c155ece6b1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -22
+      objectReference: {fileID: 0}
+    - target: {fileID: 2471031497841053213, guid: 3c0a6b28470dc2d478efb8c155ece6b1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -26
+      objectReference: {fileID: 0}
+    - target: {fileID: 2471031498237335114, guid: 3c0a6b28470dc2d478efb8c155ece6b1, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2471031498968307508, guid: 3c0a6b28470dc2d478efb8c155ece6b1, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -474,6 +486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cf6009768a03fe48b89b09208f4dba1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interfaceManager: {fileID: 0}
 --- !u!1 &1084160768
 GameObject:
   m_ObjectHideFlags: 0

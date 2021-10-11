@@ -46,7 +46,7 @@ public class IA : MonoBehaviour
 
         angle = Random.Range(minAngle, maxAngle);
         dir = VectorByAngle(angle);
-        actualForce = Random.Range(0f, 1f);
+        actualForce = Random.Range(0.5f, 1f);
         GameManager.PedraSpecs nextTipo = GameManager.Instance.NextPedra(gameObject);
         if (nextTipo.tipo != Pedra.Tipos.Nada)
         {
