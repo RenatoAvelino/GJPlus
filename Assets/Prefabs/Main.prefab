@@ -94,7 +94,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -54.00006, y: -22.00003}
+  m_AnchoredPosition: {x: -54.00006, y: -22}
   m_SizeDelta: {x: -2, y: 6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2471031497398027168
@@ -542,7 +542,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 49.99994, y: -26.00003}
+  m_AnchoredPosition: {x: 49.99994, y: -26}
   m_SizeDelta: {x: -2, y: 6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2471031497841053215
@@ -1093,6 +1093,10 @@ MonoBehaviour:
   paredeMask:
     serializedVersion: 2
     m_Bits: 128
+  sprites:
+  - {fileID: -7891402342722415452, guid: dd062fcf6591e1344bab6c262bfcbae3, type: 3}
+  - {fileID: -6278063772930858986, guid: dd062fcf6591e1344bab6c262bfcbae3, type: 3}
+  - {fileID: 4642889489189387892, guid: dd062fcf6591e1344bab6c262bfcbae3, type: 3}
 --- !u!212 &2471031498249063760
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ public class Anel : MonoBehaviour
     private int score;
     void Start()
     {
+        _gc = Camera.main.GetComponent<GameController>();
         _ring = this.GetComponent<CircleCollider2D>();
         _ring.radius = Radius;
     }
