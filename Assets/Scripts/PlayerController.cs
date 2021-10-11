@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour
     private float horizontalInput;
     private int indexPedra = 0;
 
+    public int estado = 0;
+
     [Header("Objetos")]
     //public Pedra targetPedra;
     public Medidor medidor;
@@ -33,6 +35,8 @@ public class PlayerController : MonoBehaviour
     public Interface interfaceManager;
 
     public LayerMask paredeMask;
+
+    public Sprite[] sprites = new Sprite[3];
 
     void Start()
     {
@@ -50,19 +54,28 @@ public class PlayerController : MonoBehaviour
 
         if (GameManager.Instance.CanPlay && GameManager.Instance.player1Jogando)
         {
+            if(estado < 0)
+                estado = 0;
             horizontalInput = Input.GetAxisRaw("Horizontal");
             transform.position += new Vector3(horizontalInput, 0f, 0f) * Time.deltaTime;
             GetComponent<SpriteRenderer>().color = Color.cyan;
             leftMouseButton = Input.GetMouseButton(0);
             PercentageGetter();
+            if (estado < 1 && leftMouseButton)
+                estado = 1;
             if (Input.GetMouseButtonUp(0))
             {
+                if (estado < 2)
+                    estado = 2;
                 Arremesso();
                 actualForce = 0f;
                 medidor.UpdateMedidor(actualForce);
                 vetor.transform.rotation = Quaternion.AngleAxis(0f, Vector3.forward);
+                StartCoroutine(tempim());
             }
         }
+
+        GetComponent<SpriteRenderer>().sprite = sprites[estado];
     }
 
     public void Arremesso()
@@ -134,6 +147,12 @@ public class PlayerController : MonoBehaviour
         if (subindo)
             yield return new WaitForSeconds(maxChargeWait);
         contando = false;
+    }
+
+    private IEnumerator tempim()
+    {
+        yield return new WaitForSeconds(0.3f);
+        estado = 0;
     }
 
     private Vector3 VectorByAngle(float angulo)

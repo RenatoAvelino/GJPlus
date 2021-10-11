@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &468994252
 Transform:
   m_ObjectHideFlags: 0
@@ -1086,6 +1086,7 @@ MonoBehaviour:
   angle: 0
   leftMouseButton: 0
   mainCamera: {fileID: 0}
+  estado: 0
   medidor: {fileID: 2471031498762805396}
   vetor: {fileID: 2471031498487043337}
   prefabPedra: {fileID: 1530009346342616780, guid: 81a5685729b61444ead37f737b8a1c32, type: 3}
@@ -1093,6 +1094,10 @@ MonoBehaviour:
   paredeMask:
     serializedVersion: 2
     m_Bits: 128
+  sprites:
+  - {fileID: -7891402342722415452, guid: dd062fcf6591e1344bab6c262bfcbae3, type: 3}
+  - {fileID: -6278063772930858986, guid: dd062fcf6591e1344bab6c262bfcbae3, type: 3}
+  - {fileID: 4642889489189387892, guid: dd062fcf6591e1344bab6c262bfcbae3, type: 3}
 --- !u!212 &2471031498249063760
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1182,7 +1187,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 1000000
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
