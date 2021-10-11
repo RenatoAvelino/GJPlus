@@ -20,7 +20,9 @@ public class Purple : MonoBehaviour
     {
         if (collision.gameObject.tag == "Pedra")
         {
-            //TODO Atrito
+            GameObject tmp = collision.gameObject;
+            Vector2 randN = new Vector2(Random.Range(0, 4.3f), Random.Range(0, 4.3f));
+            tmp.gameObject.GetComponent<Rigidbody2D>().AddForce(randN, ForceMode2D.Impulse);
         }
     }
 }

@@ -75,7 +75,7 @@ public class Pedra : MonoBehaviour
         _ultimoPingo = tmp;
         tmp.transform.position = this.transform.position;
         tmp.GetComponent<CircleCollider2D>().radius = 0;
-        Invoke("dryPaint", _paintDelay - 0.05f);
+        Invoke("dryPaint", _paintDelay - 0.01f);
     }
 
     private void dryPaint()
