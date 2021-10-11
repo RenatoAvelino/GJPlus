@@ -13,7 +13,7 @@
 	</object>
 	<object class="GameParameter" id="{d2ade8a4-7603-42b4-a5d4-075db5021ab6}">
 		<property name="initialValue">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<relationship name="automators">
 			<destination>{8f9f07bf-1d0d-4c6b-a145-b4f83b5fffdf}</destination>

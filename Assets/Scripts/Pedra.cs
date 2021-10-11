@@ -30,7 +30,7 @@ public class Pedra : MonoBehaviour
     public string PedraImpactoObstaculo = "event:/ImpactoPedraObstaculo";
     public string Escorrega = "event:/Escorrega";
 
-    float fatorVelocidade = 0.03f;
+    float fatorVelocidade = 0.016F;
     float impactoVelocidade;
 
     FMOD.Studio.EventInstance EventoImpactoPedra;
@@ -44,21 +44,10 @@ public class Pedra : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Velocidade = fatorVelocidade * rb.velocity.magnitude;
-        EventoImpactoPedra = FMODUnity.RuntimeManager.CreateInstance(PedraImpactoPedra);
-        EventoImpactoObstaculo = FMODUnity.RuntimeManager.CreateInstance(PedraImpactoObstaculo);
-        EventoEscorrega = FMODUnity.RuntimeManager.CreateInstance(Escorrega);
-        EventoEscorrega.start();
-        EventoEscorrega.setParameterByName("Velocidade", Velocidade);
-
-        FMODUnity.RuntimeManager.AttachInstanceToGameObject(EventoEscorrega, transform, rb);
-       
 
 
         spriteRenderer.sprite = GameManager.Instance.GetPedraSprite(tipo);
 
-
-        fatorVelocidade = Velocidade / rb.velocity.magnitude;
 
         if (tipo == Tipos.Leve)
         {
@@ -86,7 +75,7 @@ public class Pedra : MonoBehaviour
             spriteRenderer.color = Color.yellow;
             _rastro = rastroAmarelo;
         }
-        else if(cor == Cores.Azul)
+        else if (cor == Cores.Azul)
         {
             spriteRenderer.color = Color.blue;
             _rastro = rastroAzul;
@@ -94,6 +83,18 @@ public class Pedra : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.AddForce(force, ForceMode2D.Impulse);
 
+        print(rb.velocity.magnitude);
+
+        Velocidade  = fatorVelocidade*rb.velocity.magnitude;
+        EventoImpactoPedra = FMODUnity.RuntimeManager.CreateInstance(PedraImpactoPedra);
+        EventoImpactoObstaculo = FMODUnity.RuntimeManager.CreateInstance(PedraImpactoObstaculo);
+        EventoEscorrega = FMODUnity.RuntimeManager.CreateInstance(Escorrega);
+        EventoEscorrega.start();
+        EventoEscorrega.setParameterByName("Velocidade", Velocidade);
+
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(EventoEscorrega, transform, rb);
+
+        fatorVelocidade = Velocidade / rb.velocity.magnitude;
     }
 
     // Update is called once per frame
